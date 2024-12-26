@@ -2,7 +2,9 @@
 
 import { CardProjeto } from '@/components/CardProjeto/CardProjeto';
 import { Fotos } from '@/components/Fotos/Fotos';
+import Input from '@/components/Input/Input';
 import { Layout } from '@/components/Layout/Layout';
+import { useState } from 'react';
 import { FaDatabase } from 'react-icons/fa';
 import { PiMoonStarsFill } from 'react-icons/pi';
 import { RiJavaLine, RiReactjsLine } from 'react-icons/ri';
@@ -13,6 +15,53 @@ import { Typewriter } from 'react-simple-typewriter';
 // sm: md: lg: xl: 2xl:
 
 export default function Home() {
+
+  const [formData, setFormData] = useState({
+    nome: '',
+    email: '',
+    mensagem: ''
+});
+
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+        ...formData,
+        [name]: value
+    });
+};
+
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+        const response = await fetch('https://formspree.io/f/xlddgqag', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: formData.nome,
+                email: formData.email,
+                message: formData.mensagem
+            })
+        });
+
+        if (response.ok) {
+            alert('Mensagem enviada com sucesso!');
+            setFormData({
+                nome: '',
+                email: '',
+                mensagem: ''
+            });
+        } else {
+            alert('Erro ao enviar a mensagem. Por favor, tente novamente.');
+        }
+    } catch (error) {
+        console.error("Erro:", error); 
+        alert('Erro ao enviar a mensagem. Verifique sua conexão e tente novamente.');
+    }
+};
+
   return (
     <Layout>
       <div className=' mb-80 mt-64'>
@@ -135,7 +184,7 @@ export default function Home() {
 
         <div className='flex gap-2 justify-center mt-10 mb-10'>
           <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
-          <h1 className='text-3xl'>Meus Projetos </h1>
+          <h1 className='text-3xl mb-7'>Meus Projetos </h1>
         </div>
 
         <div className="flex justify-center text-center flex-col gap-12  mt-14 mb-14">
@@ -168,27 +217,80 @@ export default function Home() {
 
           </div>
 
-          <div className='flex justify-center gap-28'>
+          <div className='flex justify-center gap-28 mb-9'>
 
             <CardProjeto
-                src="/branco.jpg"
-                alt="Imagem de pontos"
-                titulo="Em breve"
-                descricao="..."
-                link="/breve"
-            />
+              src="/branco.jpg"
+              alt="Imagem de pontos"
+              titulo="Em breve"
+              descricao="..." link={''}            />
 
             <CardProjeto
                 src="/branco.jpg"
                 alt="Imagem do Portfólio"
                 titulo="Em breve"
                 descricao="..."
-                link="/breve"
+                link={''}  
             />
 
           </div>
 
         </div>
+
+        
+      </div>
+
+      <div className=' bg-pink-50'>
+
+        <div className='flex gap-2 justify-center'>
+          <PiMoonStarsFill size="2rem" className='text-pink-800 mt-12'/>
+          <h1 className='text-3xl mt-11'>Contato </h1>
+        </div>
+
+        <div className='flex justify-center gap-64 mt-14'>
+          <form onSubmit={handleSubmit}>
+              <div className=''>
+
+                    <Input
+                      label="Nome*:"
+                      type="text"
+                      name="nome"
+                      value={formData.nome}
+                      onChange={handleInputChange}
+                      required
+                    />
+
+                    <Input
+                      label="Email*:"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+
+                    <Input
+                      label="Mensagem*:"
+                      type="text"
+                      name="mensagem"
+                      value={formData.mensagem}
+                      onChange={handleInputChange}
+                      required
+                      textarea={true}
+                    />
+
+              </div>
+
+                <div className='flex text-center justify-center mt-8 mb-32'>
+                  <button type="submit" className="text-base bg-pink-700 hover:bg-pink-600 transition-colors duration-600 text-white p-3 w-36 rounded-full ">Enviar</button>
+                </div>
+        </form>
+
+        <div className='mt-16'>
+          <Fotos imagens={[{ src: "/contat.jpeg", alt: "Minha Foto" }]} />
+        </div>
+        </div>
+
       </div>
     </Layout>
   )
