@@ -1,5 +1,6 @@
 "use client";
 
+import { CardProjeto } from '@/components/CardProjeto/CardProjeto';
 import { Fotos } from '@/components/Fotos/Fotos';
 import { Layout } from '@/components/Layout/Layout';
 import { FaDatabase } from 'react-icons/fa';
@@ -7,6 +8,7 @@ import { PiMoonStarsFill } from 'react-icons/pi';
 import { RiJavaLine, RiReactjsLine } from 'react-icons/ri';
 import { SiNextdotjs } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
+
 
 // sm: md: lg: xl: 2xl:
 
@@ -131,12 +133,62 @@ export default function Home() {
 
       <div>
 
-          <div className='flex gap-2'>
-              <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
-              <h1 className='text-3xl'>Meus Projetos </h1>
-            </div>
+        <div className='flex gap-2 justify-center mt-10 mb-10'>
+          <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
+          <h1 className='text-3xl'>Meus Projetos </h1>
+        </div>
 
+        <div className="flex justify-center text-center flex-col gap-12  mt-14 mb-14">
+      
+          <div className='flex justify-center gap-28'>
 
+            <CardProjeto
+                src="/ecoHome.jpeg"
+                alt="Imagem do EcoHome"
+                titulo="Eco Home"
+                descricao="Monitoramento Ecológico"
+                link="/eco-home" // Define a rota para onde será redirecionado
+            />
+
+            <CardProjeto
+                src="/brainDrive.jpeg"
+                alt="Imagem do Brain Drive"
+                titulo="Brain Drive"
+                descricao="Diagnóstico Automotivo"
+                link="/brain-drive"
+            />
+
+            <CardProjeto
+                src="/portfolio.jpeg"
+                alt="Imagem do Portfólio"
+                titulo="Portfólio"
+                descricao="Projetos Pessoais"
+                link="/portfolio"
+            />
+
+          </div>
+
+          <div className='flex justify-center gap-28'>
+
+            <CardProjeto
+                src="/branco.jpg"
+                alt="Imagem de pontos"
+                titulo="Em breve"
+                descricao="..."
+                link="/breve"
+            />
+
+            <CardProjeto
+                src="/branco.jpg"
+                alt="Imagem do Portfólio"
+                titulo="Em breve"
+                descricao="..."
+                link="/breve"
+            />
+
+          </div>
+
+        </div>
       </div>
     </Layout>
   )
