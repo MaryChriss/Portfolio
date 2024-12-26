@@ -18,6 +18,8 @@ const config: Config = {
       abel: ['Abel', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
 export default config
