@@ -64,11 +64,24 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
   return (
     <Layout>
-      <div id="home" className=' mb-80 mt-64'>
+      <div id="home" className=' mb-80 mt-64
+        sm:mb-80 sm:mt-96
+        md:mt-96
+        lg:mt-96
+        xl:mt-64 
+        2xl:mt-64
+      '>
 
-        <div  className='mt-40 flex items-center justify-center gap-96 mb-24'>
+        <div  className='mt-40 flex items-center justify-center gap-96 mb-24
+        sm:flex-col sm:mt-16 sm:-mb-11
+        md:flex-col
+        lg:flex-col
+        xl:mt-40 xl:flex-row xl:gap-24
+        2xl:flex-row 2xl:mt-40
+        '>
 
-          <div className='text-xl'>
+          <div className='text-xl -mt-48
+          '>
           <h1 className="text-4xl font-bold text-gray-800">
             <Typewriter
               words={["Hello World!", "Bem-vindo(a) ao meu mundo!", "Muito Prazer!"]}
@@ -81,18 +94,24 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             />
           </h1>
 
-              <div className='text-4xl font-bold text-gray-800 flex'>
+              <div className='text-4xl font-bold text-gray-800 flex '>
                 <p>Eu sou a
                   <span className=" text-pink-800">  Mariana Christina.</span>
                 </p>
               </div>
 
-            <p className='text-2xl'> <br/> Estudante de Análise e Desenvolvimento de Sistemas,<br/>
+            <p className='text-2xl
+            '> <br/> Estudante de Análise e Desenvolvimento de Sistemas,<br/>
               apaixonada por criar experiências digitais intuitivas e<br/>
               criativas.
             </p>
 
-            <p className='text-2xl'> <br/>
+            <p className='text-2xl 
+            sm:-mb-52
+            md:-mb-52 
+            lg:-mb-52 
+            xl:text-2xl
+            2xl:text-2xl '> <br/>
               Explore meu portfólio para conhecer mais sobre mim e <br/> 
               meus projetos!
             </p>
@@ -106,9 +125,21 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
       </div>
 
-      <div id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56'>
+      <div id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56
+      sm:flex-col
+      md:flex-col
+      lg:flex-col 
+      xl:justify-center xl:flex-row
+      2xl:items-center 2xl:flex-row
+      '>
 
-          <div className='-mt-40'>
+          <div className='-mt-40
+          sm:mt-32 
+          md:mt-32 
+          lg:mt-32  
+          xl:-mt-40 xl:ml-28
+          2xl:-mt-40
+          '>
           <Fotos
               imagens={[
                   { src: "/sobre.jpeg", alt: "Foto 1" },
@@ -120,14 +151,38 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           <div>
 
-            <div className='mt-32 mb-24'>
+            <div className='mt-32 mb-24
+              sm:mt-0
+              md:mt-0
+              lg:mt-0
+              xl:mb-24
+              2xl:mb-24
+            '>
 
-              <div className='flex gap-2'>
+              <div className='flex gap-2 mt-12
+              sm:justify-center 
+              md:justify-center 
+              lg:justify-center
+              xl:gap-2
+              2xl:gap-2
+              '>
                 <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
-                <h1 className='text-3xl text-pink-800'>Sobre Mim </h1>
+                <h1 className='text-3xl text-pink-800
+                  sm:text-2xl
+                  md:text-2xl
+                  lg:text-2xl
+                  xl:text-3xl
+                  2xl:text-3xl
+                '>Sobre Mim </h1>
               </div>
 
-              <p className='text-xl'> <br/> Sou entusiasta da tecnologia e estudante de <span className='text-pink-600'> Análise e Desenvolvimento de <br/>
+              <p className='text-xl
+                sm:text-lg sm:p-14
+                md:text-lg md:p-14
+                lg:text-lg lg:p-14
+                xl:text-xl
+                2xl:text-xl
+              '> <br/> Sou entusiasta da tecnologia e estudante de <span className='text-pink-600'> Análise e Desenvolvimento de <br/>
               Sistemas na FIAP. </span> Oque mais me fascina no mundo da tecnologia é a <br/>
                 possibilidade de criar soluções inovadoras para problemas do dia a dia, <br/>
                 explorando a criatividade e acompanhando a constante evolução dessa área tão dinâmica. <br/>
@@ -144,7 +199,13 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 para projetos que impactem positivamente as pessoas! <br/></p>
             </div>
 
-              <div className='flex ml-32 gap-5 mb-24'>
+              <div className='flex ml-32 gap-5 mb-24
+              sm:ml-0 sm:justify-center
+              md:ml-0 md:justify-center
+              lg:ml-0 lg:justify-center
+              xl:mb-24
+              2xl:mb-24
+              '>
                   <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -187,9 +248,16 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <h1 className='text-3xl mb-7'>Meus Projetos </h1>
         </div>
 
-        <div className="flex justify-center text-center flex-col gap-12  mt-14 mb-14">
+        <div className="flex justify-center text-center flex-col gap-12  mt-14 mb-14
+        ">
       
-          <div className='flex justify-center gap-28'>
+          <div className='flex justify-center gap-28
+          sm:flex-col
+          md:flex-col 
+          lg:flex-row lg:gap-16
+          xl:gap-28 xl:flex-row
+          2xl:gap-28 2xl:flex-row
+          '>
 
             <CardProjeto
                 src="/ecoHome.jpeg"
@@ -217,7 +285,13 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           </div>
 
-          <div className='flex justify-center gap-28 mb-9'>
+          <div className='flex justify-center gap-28 mb-9
+          sm:flex-col
+          md:flex-col
+          lg:flex-row lg:gap-16
+          xl:mb-9 xl:flex-row
+          2xl:mb-9 2xl:flex-row
+          '>
 
             <CardProjeto
               src="/convite.jpeg"
@@ -241,16 +315,28 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         
       </div>
 
-      <div id='contato' className=' bg-pink-50'>
+      <div id='contato' className=' bg-pink-50 
+      '>
 
         <div className='flex gap-2 justify-center'>
           <PiMoonStarsFill size="2rem" className='text-pink-800 mt-12'/>
           <h1 className='text-3xl mt-11'>Contato </h1>
         </div>
 
-        <div className='flex justify-center gap-64 mt-14'>
+        <div className='flex justify-center gap-64 mt-14
+          sm:flex-col sm:gap-11
+          md:flex-col
+          lg:flex-col 
+          xl:mt-14 xl:flex-row xl:gap-36
+          2xl:mt-14 2xl:flex-row 2xl:gap-64
+        '>
           <form onSubmit={handleSubmit}>
-              <div className=''>
+              <div className='
+              sm:flex sm:flex-col
+              md:flex md:flex-col
+              lg:flex lg:flex-col
+              xl:mt-0 xl:flex-col
+              2xl:mt-0 2xl:flex-col'>
 
                     <Input
                       label="Nome*:"
@@ -287,7 +373,13 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 </div>
         </form>
 
-        <div className='mt-16'>
+        <div className='mt-16
+          sm:mt-5 sm:flex sm:justify-center sm:mb-40
+          md:mt-5 md:justify-center md:mb-40
+          lg:mt-5 lg:justify-center lg:mb-40
+          xl:mt-16 
+          2xl:mt-16
+        '>
           <Fotos imagens={[{ src: "/contat.jpeg", alt: "Minha Foto" }]} />
         </div>
         </div>
