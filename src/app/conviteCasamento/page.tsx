@@ -4,7 +4,7 @@ import { CardProjeto } from "@/components/CardProjeto/CardProjeto";
 import { Layout } from "@/components/Layout/Layout";
 import { useRouter } from "next/navigation";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaDatabase } from "react-icons/fa";
+import { FaAngular, FaDatabase, FaSass } from "react-icons/fa";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { RiJavaLine, RiReactjsLine } from "react-icons/ri";
 import { SiNextdotjs } from "react-icons/si";
@@ -22,21 +22,21 @@ export default function Convite() {
                     <FaCircleArrowLeft className="cursor-pointer text-pink-800 hover:text-pink-700" size={35} onClick={() => router.push('/#projetos')} />
                 </div>
 
-                <div className="flex flex-col justify-center mt-24 gap-16">
+                <div className="flex flex-col justify-center mt-24 gap-16 ">
 
                     <div>
                         <CardProjeto
-                            src="/portfolio.jpeg"
-                            alt="Imagem do Portfólio"
-                            titulo="Portfólio"
-                            descricao="Projeto Pessoal"
+                            src="/convite.jpeg"
+                            alt="Convite"
+                            titulo="Convite"
+                            descricao="Para casamento"
                             link={''}
                         />
                     </div>
 
                     <div className="flex justify-center">
                         <a
-                            href="https://global2-front.vercel.app/"
+                            href="https://convite-tatiane-roberto.netlify.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
@@ -53,12 +53,13 @@ export default function Convite() {
                     <div>
 
                         <div className="mt-14">
-                            <h2 className="text-4xl text-pink-800 font-abel mb-3">- Meu Portfólio Mariana Christina.</h2>
+                            <h2 className="text-4xl text-pink-800 font-abel mb-3">- Convite de casamento.</h2>
 
                             <p className="font-abel mb-11">
-                                O projeto EcoHome foi desenvolvido com o propósito de oferecer uma solução prática e acessível <br/>
-                                para famílias monitorarem e otimizarem o consumo de energia elétrica em suas casas. Auxiliando os <br/> 
-                                usuários a tomarem decisões, contribuindo para a preservação ambiental e economia doméstica.
+                            O convite de casamento foi criado com o propósito de refletir o amor e a dedicação colocados na <br/>
+                            celebração desse momento tão especial.<br/>
+                            Pensado com cada detalhe para transmitir carinho e sofisticação, <br/>
+                            ele convida os amigos e familiares a compartilharem a alegria de um dia único, cheio de significado e emoção.
                             </p>
                         </div>
 
@@ -66,11 +67,8 @@ export default function Convite() {
                             <h2 className="text-3xl text-pink-800 font-abel mb-4">Tecnologias Utilizadas:</h2>
 
                             <ul className="list-disc list-inside text-gray-800">
-                                <li>Next.js</li>
-                                <li>Java</li>
-                                <li>Oracle SQL</li>
-                                <li>TypeScript</li>
-                                <li>Tailwind</li>
+                                <li>Angular</li>
+                                <li>Sass</li>
                             </ul>
                         </div>
 
@@ -78,9 +76,11 @@ export default function Convite() {
                             <h2 className="text-3xl text-pink-800 font-abel mb-3 mt-11">Meu Papel no Projeto:</h2>
 
                             <p>
-                                O EcoHome é um projeto academico desenvolvido para a Global Solution da FIAP. No projeto, atuei <br/>
-                                junto ao grupo no design e na implementação, integrando a API REST em Java com o banco de <br/>
-                                dados e o front-end para garantir o funcionamento do site.
+                            Este convite de casamento foi desenvolvido em colaboração, unindo esforços e criatividade para criar algo especial.<br/>
+                            Minha contribuição esteve focada principalmente na parte visual e responsiva, cuidando das responsividade,<br/>
+                            auxiliando no design, na escolha das cores e desenvolvendo as ideias iniciais no Figma.<br/>
+                            Foi gratificante transformar conceitos em um convite elegante e funcional, que reflete a essência da
+                            celebração e encanta a todos que o recebem.<br/>
                             </p>
                         </div>
 
@@ -91,31 +91,7 @@ export default function Convite() {
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center w-14 h-14 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-600"
                                 >
-                                <RiJavaLine className="w-8 h-8" />
-                            </a>
-                        
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center w-14 h-14 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-600"
-                                >
-                                <RiReactjsLine className="w-8 h-8" />
-                            </a>
-                        
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center w-14 h-14 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-600"
-                                >
-                                <SiNextdotjs className="w-7 h-7" />
-                            </a>
-                        
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-center w-14 h-14 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-600"
-                                >
-                                <FaDatabase  className="w-7 h-7" />
+                                <FaSass className="w-8 h-8" />
                             </a>
 
                             <a
@@ -123,8 +99,9 @@ export default function Convite() {
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center w-14 h-14 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-600"
                                 >
-                                <BiLogoTypescript  className="w-7 h-7" />
+                                <FaAngular className="w-8 h-8" />
                             </a>
+        
                         </div>
                     </div>
                 </div>

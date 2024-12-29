@@ -220,7 +220,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <div className='flex justify-center gap-28 mb-9'>
 
             <CardProjeto
-              src="/branco.jpg"
+              src="/convite.jpeg"
               alt="Convite"
               titulo="Convite"
               descricao="Para casamento" 
@@ -231,7 +231,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 alt="Imagem do Portfólio"
                 titulo="Em breve"
                 descricao="..."
-                link={''}  
+                link='/#projetos'  
             />
 
           </div>

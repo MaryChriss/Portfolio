@@ -16,7 +16,7 @@ export default function BrainDrive() {
     return(
         <Layout>
 
-            <div className=" flex justify-center gap-32 mb-11 ">
+            <div className=" flex justify-center gap-48 mb-11 ">
 
                 <div className="mt-24 flex justify-start mr-20 -ml-36">
                     <FaCircleArrowLeft className="cursor-pointer text-pink-800 hover:text-pink-700" size={35} onClick={() => router.push('/#projetos')} />

@@ -16,7 +16,7 @@ export default function Portfolio() {
     return(
         <Layout>
 
-            <div className=" flex justify-center gap-32 mb-11 ">
+            <div className=" flex justify-center gap-48 mb-11 ">
 
                 <div className="mt-24 flex justify-start mr-20 -ml-36">
                     <FaCircleArrowLeft className="cursor-pointer text-pink-800 hover:text-pink-700" size={35} onClick={() => router.push('/#projetos')} />
@@ -36,7 +36,7 @@ export default function Portfolio() {
 
                     <div className="flex justify-center">
                         <a
-                            href="https://global2-front.vercel.app/"
+                            href="https://portfolio-alpha-lovat-97.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
