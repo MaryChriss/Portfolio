@@ -9,7 +9,7 @@ import { FaCircleArrowLeft } from "react-icons/fa6";
 import { RiJavaLine, RiReactjsLine } from "react-icons/ri";
 import { SiNextdotjs } from "react-icons/si";
 
-export default function Ecohome() {
+export default function Convite() {
 
     const router = useRouter();
     
@@ -26,10 +26,10 @@ export default function Ecohome() {
 
                     <div>
                         <CardProjeto
-                            src="/ecoHome.jpeg"
-                            alt="Imagem do EcoHome"
-                            titulo="Eco Home"
-                            descricao="Monitoramento Ecológico"
+                            src="/portfolio.jpeg"
+                            alt="Imagem do Portfólio"
+                            titulo="Portfólio"
+                            descricao="Projeto Pessoal"
                             link={''}
                         />
                     </div>
@@ -53,7 +53,7 @@ export default function Ecohome() {
                     <div>
 
                         <div className="mt-14">
-                            <h2 className="text-4xl text-pink-800 font-abel mb-3">- EcoHome</h2>
+                            <h2 className="text-4xl text-pink-800 font-abel mb-3">- Meu Portfólio Mariana Christina.</h2>
 
                             <p className="font-abel mb-11">
                                 O projeto EcoHome foi desenvolvido com o propósito de oferecer uma solução prática e acessível <br/>

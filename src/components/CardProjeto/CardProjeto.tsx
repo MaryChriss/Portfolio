@@ -20,7 +20,7 @@ export const CardProjeto: React.FC<CardProjetoProps> = ({ src, alt, titulo, desc
                     width={800}
                     height={800}
                 />
-                <h1 className="absolute inset-0 flex flex-col justify-center items-center text-lg md:text-xl font-abel text-black px-4 py-2 group-hover:bg-pink-800/60 group-hover:text-white transition-all duration-300 text-center font-bold">
+                <h1 className=" bg-white/30 absolute inset-0 flex flex-col justify-center items-center text-lg md:text-xl font-abel text-black px-4 py-2 group-hover:bg-pink-800/60 group-hover:text-white transition-all duration-300 text-center font-bold">
                     {titulo} - <br />
                     {descricao}
                 </h1>

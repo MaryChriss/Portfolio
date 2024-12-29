@@ -3,13 +3,37 @@
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 
 export const Header = () => {
+
+    const handleScroll = (id: string) => {
+        const div = document.getElementById(id);
+        if (div) {
+            div.scrollIntoView({ behavior: "smooth"})
+        }
+    };
+    
     return (
         <header className="fixed top-0 left-0 w-full bg-pink-100 flex items-center gap-52 justify-center p-3 text-black shadow-lg font-abel z-50">
             <div className="flex gap-32 mr-28">
-                <p>HOME</p>
-                <p>SOBRE MIM</p>
-                <p>PROJETOS</p>
-                <p>CONTATO</p>
+                <p onClick={() => handleScroll("home")}
+                    className="cursor-pointer hover:text-pink-500 transition-colors">
+                    HOME
+                </p>
+
+                <p onClick={() => handleScroll("sobre-mim")}
+                    className="cursor-pointer hover:text-pink-500 transition-colors">
+                    SOBRE MIM
+                </p>
+
+                <p onClick={() => handleScroll("projetos")}
+                    className="cursor-pointer hover:text-pink-500 transition-colors">
+                    PROJETOS
+                </p>
+
+                <p onClick={() => handleScroll("contato")}
+                    className="cursor-pointer hover:text-pink-500 transition-colors">
+                    CONTATO
+                </p>
+
             </div>
 
             <div className="flex gap-3">

@@ -64,9 +64,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
   return (
     <Layout>
-      <div className=' mb-80 mt-64'>
+      <div id="home" className=' mb-80 mt-64'>
 
-        <div className='mt-40 flex items-center justify-center gap-96 mb-24'>
+        <div  className='mt-40 flex items-center justify-center gap-96 mb-24'>
 
           <div className='text-xl'>
           <h1 className="text-4xl font-bold text-gray-800">
@@ -106,7 +106,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
       </div>
 
-      <div className='bg-pink-50 flex items-center justify-center gap-56'>
+      <div id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56'>
 
           <div className='-mt-40'>
           <Fotos
@@ -180,7 +180,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
       </div>
 
-      <div>
+      <div id='projetos'>
 
         <div className='flex gap-2 justify-center mt-10 mb-10'>
           <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
@@ -196,7 +196,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 alt="Imagem do EcoHome"
                 titulo="Eco Home"
                 descricao="Monitoramento Ecológico"
-                link="/eco-home" // Define a rota para onde será redirecionado
+                link="/eco-home"
             />
 
             <CardProjeto
@@ -211,7 +211,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 src="/portfolio.jpeg"
                 alt="Imagem do Portfólio"
                 titulo="Portfólio"
-                descricao="Projetos Pessoais"
+                descricao="Projeto Pessoal"
                 link="/portfolio"
             />
 
@@ -221,9 +221,10 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
             <CardProjeto
               src="/branco.jpg"
-              alt="Imagem de pontos"
-              titulo="Em breve"
-              descricao="..." link={''}            />
+              alt="Convite"
+              titulo="Convite"
+              descricao="Para casamento" 
+              link="/conviteCasamento"            />
 
             <CardProjeto
                 src="/branco.jpg"
@@ -240,7 +241,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         
       </div>
 
-      <div className=' bg-pink-50'>
+      <div id='contato' className=' bg-pink-50'>
 
         <div className='flex gap-2 justify-center'>
           <PiMoonStarsFill size="2rem" className='text-pink-800 mt-12'/>
