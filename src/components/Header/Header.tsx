@@ -14,6 +14,7 @@ export const Header = () => {
     return (
         <header className="fixed top-0 left-0 w-full bg-pink-100 flex items-center gap-52 justify-center p-3 text-black shadow-lg font-abel z-50">
             <div className="flex gap-32 mr-28
+                xs:text-xs xs:gap-2 xs:mr-0
                 sm:text-xs sm:gap-7 sm:mr-0
                 md:gap-7
                 lg:gap-32
@@ -66,7 +67,11 @@ export const Header = () => {
             </div>
 
             <div className="flex gap-3 
-                sm:gap-1 md:gap-3 lg:gap-3 xl:gap-3 2xl:gap-3
+                sm:gap-1 
+                md:gap-3 
+                lg:gap-3 
+                xl:gap-3 
+                2xl:gap-3
             ">
                 <a
                     href="https://github.com/MaryChriss"

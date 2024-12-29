@@ -16,15 +16,36 @@ export default function Portfolio() {
     return(
         <Layout>
 
-            <div className=" flex justify-center gap-48 mb-11 ">
+            <div className=" flex justify-center gap-48 mb-11 
+            sm:flex-col sm:gap-20
+            md:flex-col 
+            lg:flex-row 
+            xl:flex-row
+            2xl:flex-row ">
 
-                <div className="mt-24 flex justify-start mr-20 -ml-36">
+                <div className="mt-24 flex justify-start mr-20 -ml-36
+                sm:ml-0 sm:p-6
+                md:ml-0 md:p-6
+                lg:ml-0 lg:p-6
+                xl:mt-24 xl:justify-start
+                2xl:mt-24 2xl:justify-start 2xl:mr-20 2xl:-ml-36">
                     <FaCircleArrowLeft className="cursor-pointer text-pink-800 hover:text-pink-700" size={35} onClick={() => router.push('/#projetos')} />
                 </div>
 
-                <div className="flex flex-col justify-center mt-24 gap-16">
+                <div className="flex flex-col justify-center mt-24 gap-16
+                sm:mt-0
+                md:ml-0 
+                lg:ml-0 
+                xl:flex-col xl:justify-center xl:mt-24 xl:gap-16
+                2xl:flex-col 2xl:justify-center 2xl:mt-24 2xl:gap-16">
 
-                    <div>
+                    <div className="
+                    xs:ml-0
+                    sm:flex sm:justify-center 
+                    md:ml-0 
+                    lg:ml-0
+                    xl:ml-0 
+                    2xl:ml-0">
                         <CardProjeto
                             src="/portfolio.jpeg"
                             alt="Imagem do Portfólio"
@@ -44,7 +65,12 @@ export default function Portfolio() {
                     </div>
                 </div>
 
-                <div className="mt-24">
+                <div className="mt-24 ml-11
+                sm:mt-0
+                md:mt-0 
+                lg:mt-24 lg:ml-11 
+                xl:mt-24 xl:ml-11 
+                2xl:mt-24 2xl:ml-11">
 
                     <div className="mt-10">
                         <h1 className="text-4xl font-abel">DETALHES DO PROJETO</h1>
@@ -82,7 +108,12 @@ export default function Portfolio() {
                             </p>
                         </div>
 
-                        <div className='flex ml-32 gap-5 mt-16'>
+                        <div className='flex ml-32 gap-5 mt-11
+                        sm:mb-20 sm:ml-0 sm:justify-center sm:mt-28
+                        md:mb-20 md:ml-0 md:justify-center md:mt-28
+                        lg:mb-20 lg:ml-0 lg:justify-center lg:mt-28
+                        xl:ml-0 xl:gap-5 xl:mt-11 
+                        2xl:justify-center 2xl:gap-5 2xl:mt-11 2xl:ml-0'>
                         
                             <a
                                 target="_blank"
