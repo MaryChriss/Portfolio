@@ -6,12 +6,28 @@ export const Footer = () => {
     return(
         <div className="flex w-full h-16 bg-black justify-between items-center">
 
-            <div className="flex items-center ml-14">
+            <div className="flex items-center ml-14
+            xmd:-ml-1
+            xlg:ml-0
+            sm:ml-14 
+            md:ml-14 
+            lg:ml-14 
+            xl:ml-14
+            2xl:ml-14
+            ">
                 <MdEmail size="1.5rem" color="#7c1f41" />
                 <p className="text-white">mariana.christina.cmf@gmail.com</p>
             </div>
 
-            <div className="flex gap-10 mr-14">
+            <div className="flex gap-10 mr-14
+            xmd:gap-0
+            xlg:gap-2
+            sm:gap-10 
+            md:gap-10 
+            lg:gap-10 
+            xl:gap-10 
+            2xl:gap-10
+            ">
                 <a
                     href="https://www.instagram.com/mariana_christina_/"
                     target="_blank"

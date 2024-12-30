@@ -12,7 +12,7 @@ import { SiNextdotjs } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
 
 
-// sm: md: lg: xl: 2xl:
+// xlg: sm: md: lg: xl: 2xl:
 
 export default function Home() {
 
@@ -65,6 +65,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   return (
     <Layout>
       <div id="home" className=' mb-80 mt-64
+        xmd:mt-72 xmd:mb-72
+        xlg:mt-72 xlg:mb-72
         sm:mb-80 sm:mt-96
         md:mt-96
         lg:mt-96
@@ -73,6 +75,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
         <div  className='mt-40 flex items-center justify-center gap-96 mb-24
+        xmd:flex-col
+        xlg:flex-col
         sm:flex-col sm:mt-16 sm:-mb-11
         md:flex-col
         lg:flex-col
@@ -82,7 +86,15 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           <div className='text-xl -mt-48
           '>
-          <h1 className="text-4xl font-bold text-gray-800">
+          <h1 className="text-4xl font-bold text-gray-800
+          xmd:text-xl xmd:mt-16
+          xlg:text-2xl xlg:mt-16
+          sm:text-4xl 
+          md:text-4xl 
+          lg:text-4xl 
+          xl:text-4xl
+          2xl:text-4xl
+          ">
             <Typewriter
               words={["Hello World!", "Bem-vindo(a) ao meu mundo!", "Muito Prazer!"]}
               loop={false} 
@@ -94,19 +106,36 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             />
           </h1>
 
-              <div className='text-4xl font-bold text-gray-800 flex '>
+              <div className='text-4xl font-bold text-gray-800 flex
+              xmd:text-xl
+              xlg:text-2xl 
+              sm:text-4xl 
+              md:text-4xl 
+              lg:text-4xl 
+              xl:text-4xl
+              2xl:text-4xl
+              '>
                 <p>Eu sou a
                   <span className=" text-pink-800">  Mariana Christina.</span>
                 </p>
               </div>
 
             <p className='text-2xl
+              xmd:text-base
+              xlg:text-lg 
+              sm:text-2xl 
+              md:text-2xl
+              lg:text-2xl 
+              xl:text-2xl
+              2xl:text-2xl
             '> <br/> Estudante de Análise e Desenvolvimento de Sistemas,<br/>
               apaixonada por criar experiências digitais intuitivas e<br/>
               criativas.
             </p>
 
-            <p className='text-2xl 
+            <p className='text-2xl
+            xmd:text-base xmd:-mb-60
+            xlg:-mb-52 xlg:text-lg 
             sm:-mb-52
             md:-mb-52 
             lg:-mb-52 
@@ -126,6 +155,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       </div>
 
       <div id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56
+      xmd:flex-col
+      xlg:flex-col
       sm:flex-col
       md:flex-col
       lg:flex-col 
@@ -134,6 +165,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
           <div className='-mt-40
+          xmd:mt-40
+          xlg:mt-24
           sm:mt-32 
           md:mt-32 
           lg:mt-32  
@@ -152,6 +185,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <div>
 
             <div className='mt-32 mb-24
+              xmd:mt-0
+              xlg:mt-0
               sm:mt-0
               md:mt-0
               lg:mt-0
@@ -160,6 +195,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             '>
 
               <div className='flex gap-2 mt-12
+              xmd:justify-center
+              xlg:justify-center
               sm:justify-center 
               md:justify-center 
               lg:justify-center
@@ -168,6 +205,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               '>
                 <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
                 <h1 className='text-3xl text-pink-800
+                  xmd:text-lg
+                  xlg:text-xl
                   sm:text-2xl
                   md:text-2xl
                   lg:text-2xl
@@ -177,6 +216,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               </div>
 
               <p className='text-xl
+                xmd:text-sm xmd:p-9
+                xlg:text-base xlg:p-10
                 sm:text-lg sm:p-14
                 md:text-lg md:p-14
                 lg:text-lg lg:p-14
@@ -200,6 +241,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </div>
 
               <div className='flex ml-32 gap-5 mb-24
+              xmd:ml-0 xmd:justify-center
+              xlg:ml-0 xlg:justify-center
               sm:ml-0 sm:justify-center
               md:ml-0 md:justify-center
               lg:ml-0 lg:justify-center
@@ -248,15 +291,24 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <h1 className='text-3xl mb-7'>Meus Projetos </h1>
         </div>
 
-        <div className="flex justify-center text-center flex-col gap-12  mt-14 mb-14
+        <div className="flex justify-center text-center md:items-center flex-col gap-12  mt-14 mb-14
+          xmd:flex-col xmd:items-center
+          xlg:flex-col xlg:items-center
+          sm:flex-col sm:items-center
+          md:flex-col 
+          lg:flex-col lg:gap-16 
+          xl:gap-28 xl:flex-col
+          2xl:gap-28 2xl:flex-col
         ">
       
-          <div className='flex justify-center gap-28
-          sm:flex-col
-          md:flex-col 
+          <div className='flex  justify-center gap-28
+          xmd:flex-col
+          xlg:flex-col
+          sm:flex-col 
+          md:flex-col md:w-full md:justify-center md:items-center
           lg:flex-row lg:gap-16
           xl:gap-28 xl:flex-row
-          2xl:gap-28 2xl:flex-row
+          2xl:gap-28
           '>
 
             <CardProjeto
@@ -286,11 +338,13 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className='flex justify-center gap-28 mb-9
+          xmd:flex-col
+          xlg:flex-col
           sm:flex-col
-          md:flex-col
+          md:flex-col md:items-center
           lg:flex-row lg:gap-16
           xl:mb-9 xl:flex-row
-          2xl:mb-9 2xl:flex-row
+          2xl:mb-9
           '>
 
             <CardProjeto
@@ -324,6 +378,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
         <div className='flex justify-center gap-64 mt-14
+          xmd:flex-col xmd:gap-2
+          xlg:flex-col xlg:gap-2
           sm:flex-col sm:gap-11
           md:flex-col
           lg:flex-col 
@@ -332,9 +388,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         '>
           <form onSubmit={handleSubmit}>
               <div className='
+              xmd:flex xmd:flex-col
+              xlg:flex xlg:flex-col
               sm:flex sm:flex-col
-              md:flex md:flex-col
-              lg:flex lg:flex-col
+              md:flex md:flex-col md:items-center
+              lg:flex lg:flex-col lg:items-center
               xl:mt-0 xl:flex-col
               2xl:mt-0 2xl:flex-col'>
 
@@ -374,6 +432,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </form>
 
         <div className='mt-16
+          xmd:mt-5 xmd:mb-52 xmd:flex xmd:justify-center xmd:-ml-2
+          xlg:mt-5 xlg:mb-52
           sm:mt-5 sm:flex sm:justify-center sm:mb-40
           md:mt-5 md:justify-center md:mb-40
           lg:mt-5 lg:justify-center lg:mb-40
