@@ -33,17 +33,17 @@ export const Header = () => {
             >
 
         <div
-            className="flex gap-32 
-            xs:text-xs xs:gap-2 
-            sm:text-xs sm:gap-7 
-            md:gap-7 
+            className="flex gap-32
+            xs:text-xs xs:gap-2
+            sm:text-xs sm:gap-7 sm:ml-6
+            md:gap-7 md:ml-9
             lg:gap-32 
             xl:gap-32 
             2xl:gap-32"
         >
             <p
             onClick={() => handleScroll("home")}
-            className="cursor-pointer hover:text-pink-500 transition-colors 
+            className="cursor-pointer hover:text-pink-500 transition-colors
                 sm:text-xs 
                 md:text-xs 
                 lg:text-sm 
@@ -91,7 +91,7 @@ export const Header = () => {
         </div>
 
         <div
-            className="flex gap-3 
+            className="flex gap-3
             sm:gap-1 
             md:gap-3 
             lg:gap-3 
