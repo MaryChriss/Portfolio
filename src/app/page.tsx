@@ -12,7 +12,7 @@ import { SiNextdotjs } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
 
 
-// xlg: sm: md: lg: xl: 2xl:
+// xs: xmd: xlg: sm: md: lg: xl: 2xl:
 
 export default function Home() {
 
@@ -65,6 +65,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   return (
     <Layout>
       <div id="home" className=' mb-80 mt-64
+        xs:mt-96 xs:mb-72 
         xmd:mt-72 xmd:mb-72
         xlg:mt-72 xlg:mb-72
         sm:mb-80 sm:mt-96
@@ -75,6 +76,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
         <div  className='mt-40 flex items-center justify-center gap-96 mb-24
+        xs:flex-col
         xmd:flex-col
         xlg:flex-col
         sm:flex-col sm:mt-16 sm:-mb-11
@@ -87,6 +89,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <div className='text-xl -mt-48
           '>
           <h1 className="text-4xl font-bold text-gray-800
+          xs:text-lg   
           xmd:text-xl xmd:mt-16
           xlg:text-2xl xlg:mt-16
           sm:text-4xl 
@@ -107,6 +110,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </h1>
 
               <div className='text-4xl font-bold text-gray-800 flex
+              xs:text-lg
               xmd:text-xl
               xlg:text-2xl 
               sm:text-4xl 
@@ -121,6 +125,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               </div>
 
             <p className='text-2xl
+              xs:text-sm
               xmd:text-base
               xlg:text-lg 
               sm:text-2xl 
@@ -134,6 +139,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </p>
 
             <p className='text-2xl
+            xs:text-sm xs:-mb-64
             xmd:text-base xmd:-mb-60
             xlg:-mb-52 xlg:text-lg 
             sm:-mb-52
@@ -155,6 +161,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       </div>
 
       <div id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56
+      xs:flex-col
       xmd:flex-col
       xlg:flex-col
       sm:flex-col
@@ -165,6 +172,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
           <div className='-mt-40
+          xs:mt-40 
           xmd:mt-40
           xlg:mt-24
           sm:mt-32 
@@ -185,6 +193,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <div>
 
             <div className='mt-32 mb-24
+              xs:mt-0
               xmd:mt-0
               xlg:mt-0
               sm:mt-0
@@ -195,6 +204,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             '>
 
               <div className='flex gap-2 mt-12
+              xs:justify-center xs:-mb-10
               xmd:justify-center
               xlg:justify-center
               sm:justify-center 
@@ -205,6 +215,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               '>
                 <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
                 <h1 className='text-3xl text-pink-800
+                  xs:text-lg 
                   xmd:text-lg
                   xlg:text-xl
                   sm:text-2xl
@@ -216,6 +227,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               </div>
 
               <p className='text-xl
+                xs:text-sm xs:p-9
                 xmd:text-sm xmd:p-9
                 xlg:text-base xlg:p-10
                 sm:text-lg sm:p-14
@@ -241,6 +253,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </div>
 
               <div className='flex ml-32 gap-5 mb-24
+              xs:ml-0 xs:justify-center
               xmd:ml-0 xmd:justify-center
               xlg:ml-0 xlg:justify-center
               sm:ml-0 sm:justify-center
@@ -292,6 +305,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
         <div className="flex justify-center text-center md:items-center flex-col gap-12  mt-14 mb-14
+          xs:flex-col xs:items-center
           xmd:flex-col xmd:items-center
           xlg:flex-col xlg:items-center
           sm:flex-col sm:items-center
@@ -302,6 +316,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         ">
       
           <div className='flex  justify-center gap-28
+          xs:flex-col
           xmd:flex-col
           xlg:flex-col
           sm:flex-col 
@@ -338,6 +353,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className='flex justify-center gap-28 mb-9
+          xs:flex-col
           xmd:flex-col
           xlg:flex-col
           sm:flex-col
@@ -378,6 +394,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
         <div className='flex justify-center gap-64 mt-14
+          xs:flex-col xs:gap-2
           xmd:flex-col xmd:gap-2
           xlg:flex-col xlg:gap-2
           sm:flex-col sm:gap-11
@@ -388,6 +405,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         '>
           <form onSubmit={handleSubmit}>
               <div className='
+              xs:flex xs:flex-col xs:justify-center xs:items-center
               xmd:flex xmd:flex-col
               xlg:flex xlg:flex-col
               sm:flex sm:flex-col
@@ -432,6 +450,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </form>
 
         <div className='mt-16
+          xs:mt-5 xs:mb-52 xs:flex xs:justify-center
           xmd:mt-5 xmd:mb-52 xmd:flex xmd:justify-center xmd:-ml-2
           xlg:mt-5 xlg:mb-52
           sm:mt-5 sm:flex sm:justify-center sm:mb-40

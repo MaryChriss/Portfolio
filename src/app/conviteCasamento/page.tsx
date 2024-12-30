@@ -17,13 +17,19 @@ export default function Convite() {
         <Layout>
 
             <div className=" flex justify-center gap-48 mb-11 
+            xs:flex-col xs:gap-7
+            xmd:flex-col xmd:gap-10
+            xlg:flex-col xlg:gap-8
             sm:flex-col sm:gap-20
             md:flex-col 
             lg:flex-row 
             xl:flex-row
-            2xl:flex-row">
+            2xl:flex-row ">
 
                 <div className="mt-24 flex justify-start mr-20 -ml-36
+                xs:ml-0 xs:p-6 xs:
+                xmd:ml-0 xmd:p-6
+                xlg:ml-0 xlg:p-6
                 sm:ml-0 sm:p-6
                 md:ml-0 md:p-6
                 lg:ml-0 lg:p-6
@@ -33,6 +39,9 @@ export default function Convite() {
                 </div>
 
                 <div className="flex flex-col justify-center mt-24 gap-16
+                xs:ml-0 xs:-mt-0
+                xmd:mt-0
+                xlg:mt-0
                 sm:mt-0
                 md:ml-0 
                 lg:ml-0 
@@ -40,6 +49,9 @@ export default function Convite() {
                 2xl:flex-col 2xl:justify-center 2xl:mt-24 2xl:gap-16">
 
                     <div className="
+                    xs:flex xs:justify-center
+                    xmd:flex xmd:justify-center
+                    xlg:flex xlg:justify-center
                     sm:flex sm:justify-center 
                     md:ml-0 
                     lg:ml-0
@@ -65,6 +77,9 @@ export default function Convite() {
                 </div>
 
                 <div className="mt-24 ml-11
+                xs:mt-0 xs:m-0
+                xmd:mt-0
+                xlg:mt-0
                 sm:mt-0
                 md:mt-0 
                 lg:mt-24 lg:ml-11 
@@ -110,6 +125,9 @@ export default function Convite() {
                         </div>
 
                         <div className='flex ml-32 gap-5 mt-11
+                        xs:mb-20 xs:ml-0 xs:justify-center xs:mt-20
+                        xmd:mb-20 xmd:ml-0 xmd:justify-center xmd:mt-28
+                        xlg:mb-20 xlg:ml-0 xlg:justify-center xlg:mt-28
                         sm:mb-20 sm:ml-0 sm:justify-center sm:mt-28
                         md:mb-20 md:ml-0 md:justify-center md:mt-28
                         lg:mb-20 lg:ml-0 lg:justify-center lg:mt-28

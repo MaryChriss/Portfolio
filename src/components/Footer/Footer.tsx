@@ -4,9 +4,19 @@ import { MdEmail } from "react-icons/md"
 
 export const Footer = () => {
     return(
-        <div className="flex w-full h-16 bg-black justify-between items-center">
+        <div className="flex w-full h-16 bg-black justify-between items-center
+            xs:h-32
+            xmd:h-32
+            xlg:h-40
+            sm:h-16 
+            md:h-16 
+            lg:h-16
+            xl:h-16
+            2xl:h-16
+        ">
 
             <div className="flex items-center ml-14
+            xs:-ml-1
             xmd:-ml-1
             xlg:ml-0
             sm:ml-14 
@@ -20,13 +30,14 @@ export const Footer = () => {
             </div>
 
             <div className="flex gap-10 mr-14
+            xs:gap-0 xs:flex-col
             xmd:gap-0
             xlg:gap-2
             sm:gap-10 
-            md:gap-10 
-            lg:gap-10 
-            xl:gap-10 
-            2xl:gap-10
+            md:gap-10 md:flex-row
+            lg:gap-10 lg:flex-row
+            xl:gap-10 xl:flex-row
+            2xl:gap-10 2xl:flex-row
             ">
                 <a
                     href="https://www.instagram.com/mariana_christina_/"

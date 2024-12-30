@@ -36,11 +36,29 @@ export const Fotos = ({ imagens }: FotosProps) => {
             <Image
             src={imagens[0].src}
             alt={imagens[0].alt}
-            className="w-80 h-96 object-cover rounded-3xl absolute z-20"
+            className="w-80 h-96 object-cover rounded-3xl absolute z-20
+            xs:w-64 xs:h-72
+            xmd:w-72 xmd:h-80
+            xlg:w-72 xlg:h-80
+            sm:w-80 sm:h-96 
+            md:w-80 md:h-96
+            lg:w-80 lg:h-96
+            xl:w-80 xl:h-96
+            2xl:w-80 2xl:h-96
+            "
             width={500}
             height={500}
             />
-            <div className="w-80 h-96 bg-pink-900 opacity-65 rounded-3xl absolute m-7 z-10"></div>
+            <div className="w-80 h-96 bg-pink-900 opacity-65 rounded-3xl absolute m-7 z-10
+            xs:w-64 xs:h-72
+            xmd:w-72 xmd:h-80
+            xlg:w-72 xlg:h-80
+            sm:w-80 sm:h-96 
+            md:w-80 md:h-96
+            lg:w-80 lg:h-96
+            xl:w-80 xl:h-96
+            2xl:w-80 2xl:h-96
+            "></div>
         </div>
         );
     }
@@ -54,15 +72,42 @@ export const Fotos = ({ imagens }: FotosProps) => {
             <Image
                 src={imagens[currentIndex].src}
                 alt={imagens[currentIndex].alt}
-                className="w-80 h-96 object-cover rounded-3xl transition-transform duration-500  absolute z-20"
+                className="w-80 h-96 object-cover rounded-3xl transition-transform duration-500  absolute z-20
+                xs:w-64 xs:h-72
+                xmd:w-72 xmd:h-80
+                xlg:w-72 xlg:h-80
+                sm:w-80 sm:h-96 
+                md:w-80 md:h-96
+                lg:w-80 lg:h-96
+                xl:w-80 xl:h-96
+                2xl:w-80 2xl:h-96
+                "
                 width={500}
                 height={500}
             />
-            <div className="w-80 h-96 bg-pink-900 opacity-65 rounded-3xl absolute m-7 z-10"></div>
+            <div className="w-80 h-96 bg-pink-900 opacity-65 rounded-3xl absolute m-7 z-10
+            xs:w-64 xs:h-72
+            xmd:w-72 xmd:h-80
+            xlg:w-72 xlg:h-80
+            sm:w-80 sm:h-96
+            md:w-80 md:h-96 
+            lg:w-80 lg:h-96
+            xl:w-80 xl:h-96
+            2xl:w-80 2xl:h-96
+            "></div>
 
             <button
                 onClick={prevImage}
-                className="absolute  z-30 left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black"
+                className="absolute z-30 left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black
+                xs:p-2
+                xmd:p-2
+                xlg:p-2
+                sm:p-2
+                md:p-2
+                lg:p-2
+                xl:p-2
+                2xl:p-2
+                "
                 aria-label="Voltar para a imagem anterior"
                 title="Voltar para a imagem anterior" 
             >
@@ -71,7 +116,16 @@ export const Fotos = ({ imagens }: FotosProps) => {
 
             <button
                 onClick={nextImage}
-                className="absolute  z-30 right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black"
+                className="absolute  z-30 right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black
+                xs:right-16
+                xmd:right-10
+                xlg:right-10
+                sm:p-2 sm:right-3
+                md:p-2
+                lg:p-2
+                xl:p-2
+                2xl:p-2
+                "
                 aria-label="Avançar para a próxima imagem"
                 title="Avançar para a próxima imagem" 
             >
