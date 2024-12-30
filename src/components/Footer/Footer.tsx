@@ -5,9 +5,9 @@ import { MdEmail } from "react-icons/md"
 export const Footer = () => {
     return(
         <div className="flex w-full h-16 bg-black justify-between items-center
-            xs:h-32
-            xmd:h-32
-            xlg:h-40
+            xs:h-32 xs:gap-4
+            xmd:h-32 xmd:gap-16
+            xlg:h-40 xlg:gap-28
             sm:h-16 
             md:h-16 
             lg:h-16
