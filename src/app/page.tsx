@@ -65,7 +65,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   return (
     <Layout>
       <div id="home" className=' mb-80 mt-64
-        xs:mt-96 xs:mb-72 
+        xs:mt-80 xs:mb-10
         xmd:mt-72 xmd:mb-72
         xlg:mt-72 xlg:mb-72
         sm:mb-80 sm:mt-96
@@ -153,7 +153,15 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           </div>
 
-          <div>
+          <div className='
+          xs: 
+          xmd: 
+          xlg: 
+          sm: 
+          md: 
+          lg: 
+          xl: 
+          2xl:'>
             <Fotos imagens={[{ src: "/princImage.jpeg", alt: "Minha Foto" }]} />
           </div>
         </div>
@@ -172,7 +180,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
           <div className='-mt-40
-          xs:mt-40 
+          xs:mt-40 xs:flex xs:items-center xs:justify-center xs:-mb-48
           xmd:mt-40
           xlg:mt-24
           sm:mt-32 
@@ -193,7 +201,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <div>
 
             <div className='mt-32 mb-24
-              xs:mt-0
+              xs:mt-0 xs:mb-0
               xmd:mt-0
               xlg:mt-0
               sm:mt-0
@@ -450,7 +458,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </form>
 
         <div className='mt-16
-          xs:mt-5 xs:mb-52 xs:flex xs:justify-center
+          xs:mt-5 xs:mb-52 xs:flex xs:justify-center xs:items-center
           xmd:mt-5 xmd:mb-52 xmd:flex xmd:justify-center xmd:-ml-2
           xlg:mt-5 xlg:mb-52
           sm:mt-5 sm:flex sm:justify-center sm:mb-40
