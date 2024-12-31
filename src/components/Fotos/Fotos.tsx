@@ -43,7 +43,7 @@ export const Fotos = ({ imagens }: FotosProps) => {
             sm:w-80 sm:h-96 
             md:w-80 md:h-96
             lg:w-80 lg:h-96
-            xl:w-80 xl:h-96
+            xl:w-72 xl:h-80
             2xl:w-80 2xl:h-96
             "
             width={500}
@@ -56,7 +56,7 @@ export const Fotos = ({ imagens }: FotosProps) => {
             sm:w-80 sm:h-96 
             md:w-80 md:h-96
             lg:w-80 lg:h-96
-            xl:w-80 xl:h-96
+            xl:w-72 xl:h-80
             2xl:w-80 2xl:h-96
             "></div>
         </div>
@@ -79,7 +79,7 @@ export const Fotos = ({ imagens }: FotosProps) => {
                 sm:w-80 sm:h-96 
                 md:w-80 md:h-96
                 lg:w-80 lg:h-96
-                xl:w-80 xl:h-96
+                xl:w-72 xl:h-80
                 2xl:w-80 2xl:h-96
                 "
                 width={500}
@@ -92,7 +92,7 @@ export const Fotos = ({ imagens }: FotosProps) => {
             sm:w-80 sm:h-96
             md:w-80 md:h-96 
             lg:w-80 lg:h-96
-            xl:w-80 xl:h-96
+            xl:w-72 xl:h-80
             2xl:w-80 2xl:h-96
             "></div>
 
@@ -123,7 +123,7 @@ export const Fotos = ({ imagens }: FotosProps) => {
                 sm:p-2 sm:right-3
                 md:p-2
                 lg:p-2
-                xl:p-2
+                xl:p-2 xl:right-10
                 2xl:p-2
                 "
                 aria-label="Avançar para a próxima imagem"

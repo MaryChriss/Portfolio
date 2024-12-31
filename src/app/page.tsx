@@ -71,7 +71,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         sm:mb-80 sm:mt-96
         md:mt-96
         lg:mt-96
-        xl:mt-64 
+        xl:mt-96 xl:mb-60
         2xl:mt-64
       '>
 
@@ -95,7 +95,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           sm:text-4xl 
           md:text-4xl 
           lg:text-4xl 
-          xl:text-4xl
+          xl:text-3xl
           2xl:text-4xl
           ">
             <Typewriter
@@ -116,7 +116,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               sm:text-4xl 
               md:text-4xl 
               lg:text-4xl 
-              xl:text-4xl
+              xl:text-3xl
               2xl:text-4xl
               '>
                 <p>Eu sou a
@@ -131,7 +131,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               sm:text-2xl 
               md:text-2xl
               lg:text-2xl 
-              xl:text-2xl
+              xl:text-xl
               2xl:text-2xl
             '> <br/> Estudante de Análise e Desenvolvimento de Sistemas,<br/>
               apaixonada por criar experiências digitais intuitivas e<br/>
@@ -145,7 +145,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             sm:-mb-52
             md:-mb-52 
             lg:-mb-52 
-            xl:text-2xl
+            xl:text-xl
             2xl:text-2xl '> <br/>
               Explore meu portfólio para conhecer mais sobre mim e <br/> 
               meus projetos!
@@ -153,15 +153,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           </div>
 
-          <div className='
-          xs: 
-          xmd: 
-          xlg: 
-          sm: 
-          md: 
-          lg: 
-          xl: 
-          2xl:'>
+          <div>
             <Fotos imagens={[{ src: "/princImage.jpeg", alt: "Minha Foto" }]} />
           </div>
         </div>
@@ -207,7 +199,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               sm:mt-0
               md:mt-0
               lg:mt-0
-              xl:mb-24
+              xl:mb-0
               2xl:mb-24
             '>
 
@@ -229,7 +221,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   sm:text-2xl
                   md:text-2xl
                   lg:text-2xl
-                  xl:text-3xl
+                  xl:text-2xl xl:mb-11
                   2xl:text-3xl
                 '>Sobre Mim </h1>
               </div>
@@ -241,7 +233,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 sm:text-lg sm:p-14
                 md:text-lg md:p-14
                 lg:text-lg lg:p-14
-                xl:text-xl
+                xl:text-lg xl:p-1
                 2xl:text-xl
               '> <br/> Sou entusiasta da tecnologia e estudante de <span className='text-pink-600'> Análise e Desenvolvimento de <br/>
               Sistemas na FIAP. </span> Oque mais me fascina no mundo da tecnologia é a <br/>
@@ -267,7 +259,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               sm:ml-0 sm:justify-center
               md:ml-0 md:justify-center
               lg:ml-0 lg:justify-center
-              xl:mb-24
+              xl:mb-24 xl:mt-6
               2xl:mb-24
               '>
                   <a
@@ -408,7 +400,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           sm:flex-col sm:gap-11
           md:flex-col
           lg:flex-col 
-          xl:mt-14 xl:flex-row xl:gap-36
+          xl:mt-0 xl:flex-row xl:gap-36
           2xl:mt-14 2xl:flex-row 2xl:gap-64
         '>
           <form onSubmit={handleSubmit}>

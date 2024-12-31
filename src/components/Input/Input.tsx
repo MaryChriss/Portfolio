@@ -23,7 +23,7 @@ const Input: React.FC<InputProps> = ({ label, type, name, value, onChange, requi
                 sm:w-96 sm:h-60
                 md:w-96 md:h-60
                 lg:w-96 lg:h-60 
-                xl:w-96 xl:h-60 
+                xl:w-80 xl:h-56
                 2xl:w-96 2xl:h-60
                 "
                     id={name}
@@ -41,7 +41,7 @@ const Input: React.FC<InputProps> = ({ label, type, name, value, onChange, requi
                 sm:w-96 
                 md:w-96 
                 lg:w-96 
-                xl:w-96 
+                xl:w-80
                 2xl:w-96 
                 "
                     id={name}
