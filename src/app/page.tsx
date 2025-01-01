@@ -22,6 +22,12 @@ export default function Home() {
     mensagem: ''
 });
 
+const [darkMode, setDarkMode] = useState(false);
+
+const toggleDarkMode = () => {
+  setDarkMode(!darkMode);
+};
+
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
@@ -67,18 +73,18 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       <div id="home" className=' mb-80 mt-64
         xs:mt-80 xs:mb-10
         xmd:mt-72 xmd:mb-72
-        xlg:mt-72 xlg:mb-72
+        xlg:mt-72 xlg:mb-72 
         sm:mb-80 sm:mt-96
         md:mt-96
-        lg:mt-96
-        xl:mt-96 xl:mb-60
-        2xl:mt-64
+        lg:mt-80
+        xl:mt-0 xl:mb-60
+        2xl:mt-64 2xl:mb-80
       '>
 
         <div  className='mt-40 flex items-center justify-center gap-96 mb-24
-        xs:flex-col
-        xmd:flex-col
-        xlg:flex-col
+        xs:flex-col xs:p-9
+        xmd:flex-col xmd:p-9
+        xlg:flex-col xlg:p-9
         sm:flex-col sm:mt-16 sm:-mb-11
         md:flex-col
         lg:flex-col
@@ -153,7 +159,16 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           </div>
 
-          <div>
+          <div className=' mt-0
+            xs:ml-12
+            xmd:mt-0
+            xlg:mt-0 
+            sm:mt-0
+            md:mt-0 
+            lg:mt-0 
+            xl:mt-0
+            2xl:mt-0
+          '>
             <Fotos imagens={[{ src: "/princImage.jpeg", alt: "Minha Foto" }]} />
           </div>
         </div>
@@ -172,14 +187,14 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
           <div className='-mt-40
-          xs:mt-40 xs:flex xs:items-center xs:justify-center xs:-mb-48
+          xs:mt-40 xs:flex xs:ml-10 xs:justify-center xs:-mb-48
           xmd:mt-40
           xlg:mt-24
           sm:mt-32 
           md:mt-32 
           lg:mt-32  
           xl:-mt-40 xl:ml-28
-          2xl:-mt-40
+          2xl:-mt-52
           '>
           <Fotos
               imagens={[
@@ -200,7 +215,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               md:mt-0
               lg:mt-0
               xl:mb-0
-              2xl:mb-24
+              2xl:mb-0
             '>
 
               <div className='flex gap-2 mt-12
@@ -211,7 +226,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               md:justify-center 
               lg:justify-center
               xl:gap-2
-              2xl:gap-2
+              2xl:gap-2 2xl:mt-32
               '>
                 <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
                 <h1 className='text-3xl text-pink-800
@@ -233,10 +248,10 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 sm:text-lg sm:p-14
                 md:text-lg md:p-14
                 lg:text-lg lg:p-14
-                xl:text-lg xl:p-1
+                xl:text-base xl:p-1
                 2xl:text-xl
               '> <br/> Sou entusiasta da tecnologia e estudante de <span className='text-pink-600'> Análise e Desenvolvimento de <br/>
-              Sistemas na FIAP. </span> Oque mais me fascina no mundo da tecnologia é a <br/>
+              Sistemas na FIAP </span>. Oque mais me fascina no mundo da tecnologia é a <br/>
                 possibilidade de criar soluções inovadoras para problemas do dia a dia, <br/>
                 explorando a criatividade e acompanhando a constante evolução dessa área tão dinâmica. <br/>
 
@@ -260,7 +275,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               md:ml-0 md:justify-center
               lg:ml-0 lg:justify-center
               xl:mb-24 xl:mt-6
-              2xl:mb-24
+              2xl:mb-28 2xl:mt-10
               '>
                   <a
                       target="_blank"
@@ -312,7 +327,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           md:flex-col 
           lg:flex-col lg:gap-16 
           xl:gap-28 xl:flex-col
-          2xl:gap-28 2xl:flex-col
+          2xl:gap-14 2xl:flex-col
         ">
       
           <div className='flex  justify-center gap-28
@@ -450,7 +465,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </form>
 
         <div className='mt-16
-          xs:mt-5 xs:mb-52 xs:flex xs:justify-center xs:items-center
+          xs:mt-5 xs:mb-52 xs:flex xs:justify-center xs:items-center xs:ml-4
           xmd:mt-5 xmd:mb-52 xmd:flex xmd:justify-center xmd:-ml-2
           xlg:mt-5 xlg:mb-52
           sm:mt-5 sm:flex sm:justify-center sm:mb-40

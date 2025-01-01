@@ -8,7 +8,7 @@ export const Footer = () => {
             xs:h-32 xs:gap-4
             xmd:h-32 xmd:gap-16
             xlg:h-40 xlg:gap-28
-            sm:h-16 
+            sm:h-40
             md:h-16 
             lg:h-16
             xl:h-16
@@ -33,7 +33,7 @@ export const Footer = () => {
             xs:gap-0 xs:flex-col
             xmd:gap-0
             xlg:gap-2
-            sm:gap-10 
+            sm:gap-2
             md:gap-10 md:flex-row
             lg:gap-10 lg:flex-row
             xl:gap-10 xl:flex-row
