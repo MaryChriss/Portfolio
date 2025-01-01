@@ -4,7 +4,7 @@ import { CardProjeto } from '@/components/CardProjeto/CardProjeto';
 import { Fotos } from '@/components/Fotos/Fotos';
 import Input from '@/components/Input/Input';
 import { Layout } from '@/components/Layout/Layout';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaDatabase } from 'react-icons/fa';
 import { PiMoonStarsFill } from 'react-icons/pi';
 import { RiJavaLine, RiReactjsLine } from 'react-icons/ri';
@@ -21,12 +21,6 @@ export default function Home() {
     email: '',
     mensagem: ''
 });
-
-const [darkMode, setDarkMode] = useState(false);
-
-const toggleDarkMode = () => {
-  setDarkMode(!darkMode);
-};
 
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -70,7 +64,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
   return (
     <Layout>
-      <div id="home" className=' mb-80 mt-64
+
+      <section id="home" className=' mb-80 mt-64
         xs:mt-80 xs:mb-10
         xmd:mt-72 xmd:mb-72
         xlg:mt-72 xlg:mb-72 
@@ -78,11 +73,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         md:mt-96
         lg:mt-80
         xl:mt-0 xl:mb-60
-        2xl:mt-64 2xl:mb-80
+        2xl:mt-56 2xl:mb-80
       '>
 
         <div  className='mt-40 flex items-center justify-center gap-96 mb-24
-        xs:flex-col xs:p-9
+        xs:flex-col xs:p-2
         xmd:flex-col xmd:p-9
         xlg:flex-col xlg:p-9
         sm:flex-col sm:mt-16 sm:-mb-11
@@ -91,6 +86,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         xl:mt-40 xl:flex-row xl:gap-24
         2xl:flex-row 2xl:mt-40
         '>
+          
 
           <div className='text-xl -mt-48
           '>
@@ -160,7 +156,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className=' mt-0
-            xs:ml-12
+            xs:mr-5
             xmd:mt-0
             xlg:mt-0 
             sm:mt-0
@@ -173,9 +169,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
         </div>
 
-      </div>
+      </section>
 
-      <div id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56
+      <section id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56
       xs:flex-col
       xmd:flex-col
       xlg:flex-col
@@ -187,7 +183,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
           <div className='-mt-40
-          xs:mt-40 xs:flex xs:ml-10 xs:justify-center xs:-mb-48
+          xs:mt-40 xs:-mb-48 xs:mr-5
           xmd:mt-40
           xlg:mt-24
           sm:mt-32 
@@ -310,9 +306,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   </a>
               </div>
           </div>
-      </div>
+      </section>
 
-      <div id='projetos'>
+      <section id='projetos'>
 
         <div className='flex gap-2 justify-center mt-10 mb-10'>
           <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
@@ -398,9 +394,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
         
-      </div>
+      </section>
 
-      <div id='contato' className=' bg-pink-50 
+      <section id='contato' className=' bg-pink-50 
       '>
 
         <div className='flex gap-2 justify-center'>
@@ -465,7 +461,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </form>
 
         <div className='mt-16
-          xs:mt-5 xs:mb-52 xs:flex xs:justify-center xs:items-center xs:ml-4
+          xs:mt-5 xs:mb-52 xs:ml-4
           xmd:mt-5 xmd:mb-52 xmd:flex xmd:justify-center xmd:-ml-2
           xlg:mt-5 xlg:mb-52
           sm:mt-5 sm:flex sm:justify-center sm:mb-40
@@ -478,7 +474,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
         </div>
 
-      </div>
+      </section>
     </Layout>
   )
 }

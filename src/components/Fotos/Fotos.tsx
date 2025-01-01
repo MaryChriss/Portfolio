@@ -32,7 +32,16 @@ export const Fotos = ({ imagens }: FotosProps) => {
     if (imagens.length === 1) {
         //Quando for uma imagem só
         return (
-        <div className="w-80 h-96 relative">
+        <div className="w-80 h-96 relative
+            xs:w-64 xs:h-72
+            xmd:w-72 xmd:h-80
+            xlg:w-72 xlg:h-80
+            sm:w-80 sm:h-96 
+            md:w-80 md:h-96
+            lg:w-80 lg:h-96
+            xl:w-72 xl:h-80
+            2xl:w-80 2xl:h-96
+        ">
             <Image
             src={imagens[0].src}
             alt={imagens[0].alt}
@@ -67,7 +76,15 @@ export const Fotos = ({ imagens }: FotosProps) => {
     return (
         <div
             {...handlers}
-            className="w-80 h-96 relative"
+            className="w-80 h-96 relative
+            xs:w-64 xs:h-72
+            xmd:w-72 xmd:h-80
+            xlg:w-72 xlg:h-80
+            sm:w-80 sm:h-96 
+            md:w-80 md:h-96
+            lg:w-80 lg:h-96
+            xl:w-72 xl:h-80
+            2xl:w-80 2xl:h-96"
             >
             <Image
                 src={imagens[currentIndex].src}
@@ -117,7 +134,7 @@ export const Fotos = ({ imagens }: FotosProps) => {
             <button
                 onClick={nextImage}
                 className="absolute  z-30 right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black
-                xs:right-16
+                xs:right-1
                 xmd:right-10
                 xlg:right-10
                 sm:p-2 sm:right-3
