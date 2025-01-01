@@ -133,15 +133,15 @@ export const Fotos = ({ imagens }: FotosProps) => {
 
             <button
                 onClick={nextImage}
-                className="absolute  z-30 right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black
+                className="absolute z-30 right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black
                 xs:right-1
-                xmd:right-10
-                xlg:right-10
+                xmd:right-2
+                xlg:right-2
                 sm:p-2 sm:right-3
                 md:p-2
                 lg:p-2
-                xl:p-2 xl:right-10
-                2xl:p-2
+                xl:p-2 xl:right-2
+                2xl:p-2 2xl:right-0
                 "
                 aria-label="Avançar para a próxima imagem"
                 title="Avançar para a próxima imagem" 

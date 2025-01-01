@@ -77,7 +77,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       '>
 
         <div  className='mt-40 flex items-center justify-center gap-96 mb-24
-        xs:flex-col xs:p-2
+        xs:flex-col xs:p-4
         xmd:flex-col xmd:p-9
         xlg:flex-col xlg:p-9
         sm:flex-col sm:mt-16 sm:-mb-11
