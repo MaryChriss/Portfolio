@@ -26,7 +26,7 @@ export const Footer = () => {
             2xl:ml-14
             ">
                 <MdEmail size="1.5rem" color="#7c1f41" />
-                <p className="text-white">mariana.christina.cmf@gmail.com</p>
+                <p className="text-white">mariana.christina.crf@gmail.com</p>
             </div>
 
             <div className="flex gap-10 mr-14
