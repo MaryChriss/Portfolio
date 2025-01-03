@@ -15,17 +15,20 @@ export const Header = () => {
             projetos: 80,
             contato: 79,
         };
-    
+
         const div = document.getElementById(id);
         if (div) {
             const headerOffset = offsets[id] || 70;
             const elementPosition = div.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.scrollY - headerOffset;
-    
+
             window.scrollTo({
                 top: offsetPosition,
                 behavior: "smooth",
             });
+
+            // Atualizar seção ativa
+            setActiveSection(id);
         }
     };
 
@@ -44,11 +47,12 @@ export const Header = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
+                        const id = entry.target.id;
+                        setActiveSection(id);
                     }
                 });
             },
-            { threshold: 0.6 }
+            { threshold: 0.6 } // Ajuste a sensibilidade se necessário
         );
 
         sections.forEach((id) => {
@@ -68,6 +72,22 @@ export const Header = () => {
             const { offsetLeft, offsetWidth } = activeElement;
             setIndicatorStyle({ left: offsetLeft, width: offsetWidth });
         }
+    }, [activeSection]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const activeElement = document.querySelector(
+                `#header-item-${activeSection}`
+            ) as HTMLElement;
+
+            if (activeElement) {
+                const { offsetLeft, offsetWidth } = activeElement;
+                setIndicatorStyle({ left: offsetLeft, width: offsetWidth });
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, [activeSection]);
 
     return (
@@ -94,7 +114,6 @@ export const Header = () => {
                 <span
                     className="absolute bottom-0 h-1 bg-pink-500/35 rounded-full transition-all duration-300"
                     style={{
-                        position: "absolute",
                         left: `${indicatorStyle.left}px`,
                         width: `${indicatorStyle.width}px`,
                     }}
@@ -110,7 +129,9 @@ export const Header = () => {
                                 ? "text-pink-500 font-bold"
                                 : "hover:text-pink-500"
                         }
-                        
+                        xs:text-xs
+                        xmd:text-xs
+                        xlg:text-xs
                         sm:text-xs 
                         md:text-xs 
                         lg:text-sm 

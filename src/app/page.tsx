@@ -141,7 +141,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </p>
 
             <p className='text-2xl
-            xs:text-sm xs:-mb-64
+            xs:text-sm xs:-mb-96
             xmd:text-base xmd:-mb-60
             xlg:-mb-52 xlg:text-lg 
             sm:-mb-52
@@ -156,7 +156,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className=' mt-0
-            xs:mr-5
+            xs:mr-5 xs:-mt-12
             xmd:mt-0
             xlg:mt-0 
             sm:mt-0
