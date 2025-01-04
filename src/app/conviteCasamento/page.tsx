@@ -17,14 +17,14 @@ export default function Convite() {
         <Layout>
 
             <div className=" flex justify-center gap-48 mb-11 
-            xs:flex-col xs:gap-7
-            xmd:flex-col xmd:gap-10
-            xlg:flex-col xlg:gap-8
+            xs:flex-col xs:gap-7 xs:p-5
+            xmd:flex-col xmd:gap-10 xmd:p-7
+            xlg:flex-col xlg:gap-8 xlg:p-10
             sm:flex-col sm:gap-20
-            md:flex-col 
-            lg:flex-row 
+            md:flex-col md:p-16
+            lg:flex-row lg:gap-6
             xl:flex-row
-            2xl:flex-row ">
+            2xl:flex-row 2xl:gap-36 2xl:p-0">
 
                 <div className="mt-24 flex justify-start mr-20 -ml-36
                 xs:ml-0 xs:p-6 xs:
@@ -32,7 +32,7 @@ export default function Convite() {
                 xlg:ml-0 xlg:p-6
                 sm:ml-0 sm:p-6
                 md:ml-0 md:p-6
-                lg:ml-0 lg:p-6
+                lg:ml-0 lg:p-0
                 xl:mt-24 xl:justify-start
                 2xl:mt-24 2xl:justify-start 2xl:mr-20 2xl:-ml-36">
                     <FaCircleArrowLeft className="cursor-pointer text-pink-800 hover:text-pink-700" size={35} onClick={() => router.push('/#projetos')} />
@@ -44,11 +44,11 @@ export default function Convite() {
                 xlg:mt-0
                 sm:mt-0
                 md:ml-0 
-                lg:ml-0 
+                lg:ml-0
                 xl:flex-col xl:justify-center xl:mt-24 xl:gap-16
                 2xl:flex-col 2xl:justify-center 2xl:mt-24 2xl:gap-16">
 
-                    <div className="
+                    <div className="ml-0
                     xs:flex xs:justify-center
                     xmd:flex xmd:justify-center
                     xlg:flex xlg:justify-center
@@ -68,7 +68,7 @@ export default function Convite() {
 
                     <div className="flex justify-center">
                         <a
-                            href="https://convite-tatiane-roberto.netlify.app/"
+                            href="https://portfolio-alpha-lovat-97.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
@@ -82,45 +82,107 @@ export default function Convite() {
                 xlg:mt-0
                 sm:mt-0
                 md:mt-0 
-                lg:mt-24 lg:ml-11 
+                lg:mt-24 lg:ml-11
                 xl:mt-24 xl:ml-11 
                 2xl:mt-24 2xl:ml-11">
 
                     <div className="mt-10">
-                        <h1 className="text-4xl font-abel">DETALHES DO PROJETO</h1>
+                        <h1 className="text-4xl font-abel
+                            xs:text-xl
+                            xmd:text-xl
+                            xlg:text-2xl
+                            sm:text-2xl
+                            md:text-3xl
+                            lg:text-3xl
+                            xl:text-3xl
+                            2xl:text-4xl
+                        ">DETALHES DO PROJETO</h1>
                     </div>
 
                     <div>
 
                         <div className="mt-14">
-                            <h2 className="text-4xl text-pink-800 font-abel mb-3">- Convite de casamento.</h2>
+                            <h2 className="text-4xl text-pink-800 font-abel mb-3
+                            xs:text-xl
+                            xmd:text-xl
+                            xlg:text-2xl
+                            sm:text-2xl
+                            md:text-3xl
+                            lg:text-3xl
+                            xl:text-3xl
+                            2xl:text-4xl
+                            ">- Convite de casamento.</h2>
 
-                            <p className="font-abel mb-11">
+                            <p className="font-abel mb-11
+                                xs:text-sm
+                                xmd:text-sm
+                                xlg:text-base
+                                sm:text-base
+                                md:text-base
+                                lg:text-base
+                                xl:text-base
+                                2xl:text-base
+                            ">
                             O convite de casamento foi criado com o propósito de refletir o amor e a dedicação colocados na <br/>
-                            celebração desse momento tão especial.<br/>
-                            Pensado com cada detalhe para transmitir carinho e sofisticação, <br/>
-                            ele convida os amigos e familiares a compartilharem a alegria de um dia único, cheio de significado e emoção.
+                            celebração desse momento tão especia.Pensado com cada detalhe para transmitir carinho <br/> 
+                            e sofisticação, ele convida os amigos e familiares a compartilharem a alegria <br/>
+                            de um dia único, cheio de significado e emoção.<br/>
                             </p>
                         </div>
 
                         <div>
-                            <h2 className="text-3xl text-pink-800 font-abel mb-4">Tecnologias Utilizadas:</h2>
+                            <h2 className="text-3xl text-pink-800 font-abel mb-4
+                                xs:text-xl
+                                xmd:text-xl
+                                xlg:text-2xl
+                                sm:text-2xl
+                                md:text-3xl
+                                lg:text-3xl
+                                xl:text-3xl
+                                2xl:text-4xl
+                            ">Tecnologias Utilizadas:</h2>
 
-                            <ul className="list-disc list-inside text-gray-800">
+                            <ul className="list-disc list-inside text-gray-800
+                                xs:text-sm
+                                xmd:text-sm
+                                xlg:text-base
+                                sm:text-base
+                                md:text-base
+                                lg:text-base
+                                xl:text-base
+                                2xl:text-base
+                            ">
                                 <li>Angular</li>
                                 <li>Sass</li>
                             </ul>
                         </div>
 
                         <div>
-                            <h2 className="text-3xl text-pink-800 font-abel mb-3 mt-11">Meu Papel no Projeto:</h2>
+                            <h2 className="text-3xl text-pink-800 font-abel mb-3 mt-12
+                            xs:text-xl
+                            xmd:text-xl
+                            xlg:text-2xl
+                            sm:text-2xl
+                            md:text-3xl
+                            lg:text-3xl
+                            xl:text-3xl
+                            2xl:text-4xl
+                            ">Meu Papel no Projeto:</h2>
 
-                            <p>
+                            <p className="text-base
+                            xs:text-sm
+                            xmd:text-sm
+                            xlg:text-base
+                            sm:text-base
+                            md:text-base
+                            lg:text-base
+                            xl:text-base
+                            2xl:text-base">
                             Este convite de casamento foi desenvolvido em colaboração, unindo esforços e criatividade para criar algo especial.<br/>
-                            Minha contribuição esteve focada principalmente na parte visual e responsiva, cuidando das responsividade,<br/>
-                            auxiliando no design, na escolha das cores e desenvolvendo as ideias iniciais no Figma.<br/>
-                            Foi gratificante transformar conceitos em um convite elegante e funcional, que reflete a essência da
-                            celebração e encanta a todos que o recebem.<br/>
+                            Minha contribuição esteve focada principalmente na parte visual e responsiva, cuidando das responsividade,  <br/> auxiliando no design,
+                            na escolha das cores e desenvolvendo as ideias iniciais no Figma. Foi gratificante transformar <br/>
+                            conceitos em um convite elegante e funcional, que reflete a essência da <br/>
+                            celebração e encanta a todos que o recebem.
                             </p>
                         </div>
 

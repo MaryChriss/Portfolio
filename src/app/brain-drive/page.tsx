@@ -16,15 +16,15 @@ export default function BrainDrive() {
     return(
         <Layout>
 
-            <div className=" flex justify-center gap-48 mb-11 
-            xs:flex-col xs:gap-7
-            xmd:flex-col xmd:gap-10
-            xlg:flex-col xlg:gap-8
+            <div className="flex justify-center gap-48 mb-11 
+            xs:flex-col xs:gap-7 xs:p-5
+            xmd:flex-col xmd:gap-10 xmd:p-7
+            xlg:flex-col xlg:gap-8 xlg:p-10
             sm:flex-col sm:gap-20
-            md:flex-col 
-            lg:flex-row 
+            md:flex-col md:p-16
+            lg:flex-row lg:gap-6
             xl:flex-row
-            2xl:flex-row
+            2xl:flex-row 2xl:gap-60 2xl:p-0
             ">
 
                 <div className="mt-24 flex justify-start mr-20 -ml-36
@@ -33,7 +33,7 @@ export default function BrainDrive() {
                 xlg:ml-0 xlg:p-6
                 sm:ml-0 sm:p-6
                 md:ml-0 md:p-6
-                lg:ml-0 lg:p-6
+                lg:ml-0 lg:p-0
                 xl:mt-24 xl:justify-start
                 2xl:mt-24 2xl:justify-start 2xl:mr-20 2xl:-ml-36
                 ">
@@ -46,12 +46,12 @@ export default function BrainDrive() {
                 xlg:mt-0
                 sm:mt-0
                 md:ml-0 
-                lg:ml-0 
+                lg:ml-0
                 xl:flex-col xl:justify-center xl:mt-24 xl:gap-16
                 2xl:flex-col 2xl:justify-center 2xl:mt-24 2xl:gap-16
                 ">
 
-                    <div className="
+                    <div className="ml-0
                     xs:flex xs:justify-center
                     xmd:flex xmd:justify-center
                     xlg:flex xlg:justify-center
@@ -86,30 +86,75 @@ export default function BrainDrive() {
                 xlg:mt-0
                 sm:mt-0
                 md:mt-0 
-                lg:mt-24 lg:ml-11 
+                lg:mt-24 lg:ml-11
                 xl:mt-24 xl:ml-11 
                 2xl:mt-24 2xl:ml-11 
                 ">
 
                     <div className="mt-10">
-                        <h1 className="text-4xl font-abel">DETALHES DO PROJETO</h1>
+                        <h1 className="text-4xl font-abel
+                            xs:text-xl
+                            xmd:text-xl
+                            xlg:text-2xl
+                            sm:text-2xl
+                            md:text-3xl
+                            lg:text-3xl
+                            xl:text-3xl
+                            2xl:text-4xl
+                        ">DETALHES DO PROJETO</h1>
                     </div>
 
                     <div>
 
                         <div className="mt-14">
-                            <h2 className="text-4xl text-pink-800 font-abel mb-3">- Brain Drive </h2>
+                            <h2 className="text-4xl text-pink-800 font-abel mb-3
+                            xs:text-xl
+                            xmd:text-xl
+                            xlg:text-2xl
+                            sm:text-2xl
+                            md:text-3xl
+                            lg:text-3xl
+                            xl:text-3xl
+                            2xl:text-4xl
+                            ">- Brain Drive </h2>
 
-                            <p className="font-abel mb-11">
+                            <p className="font-abel mb-11
+                                xs:text-sm
+                                xmd:text-sm
+                                xlg:text-base
+                                sm:text-base
+                                md:text-base
+                                lg:text-base
+                                xl:text-base
+                                2xl:text-base
+                            ">
                             Este projeto é um sistema web de diagnóstico automotivo utilizando inteligência artificial (IA) <br/>
                             para auxiliar os usuários a identificarem problemas nos seus veículos de forma simples e rápida.
                             </p>
                         </div>
 
                         <div>
-                            <h2 className="text-3xl text-pink-800 font-abel mb-4">Tecnologias Utilizadas:</h2>
+                            <h2 className="text-3xl text-pink-800 font-abel mb-4
+                                xs:text-xl
+                                xmd:text-xl
+                                xlg:text-2xl
+                                sm:text-2xl
+                                md:text-3xl
+                                lg:text-3xl
+                                xl:text-3xl
+                                2xl:text-4xl
+                            ">Tecnologias Utilizadas:</h2>
 
-                            <ul className="list-disc list-inside text-gray-800">
+                            <ul className="list-disc list-inside text-gray-800
+                                xs:text-sm
+                                xmd:text-sm
+                                xlg:text-base
+                                sm:text-base
+                                md:text-base
+                                lg:text-base
+                                xl:text-base
+                                2xl:text-base
+                            ">
                                 <li>Next.js 13</li>
                                 <li>Java</li>
                                 <li>Oracle SQL</li>
@@ -119,9 +164,26 @@ export default function BrainDrive() {
                         </div>
 
                         <div>
-                            <h2 className="text-3xl text-pink-800 font-abel mb-3 mt-11">Meu Papel no Projeto:</h2>
+                            <h2 className="text-3xl text-pink-800 font-abel mb-3 mt-11
+                            xs:text-xl
+                            xmd:text-xl
+                            xlg:text-2xl
+                            sm:text-2xl
+                            md:text-3xl
+                            lg:text-3xl
+                            xl:text-3xl
+                            2xl:text-4xl
+                            ">Meu Papel no Projeto:</h2>
 
-                            <p>
+                            <p className=" text-base
+                            xs:text-sm
+                            xmd:text-sm
+                            xlg:text-base
+                            sm:text-base
+                            md:text-base
+                            lg:text-base
+                            xl:text-base
+                            2xl:text-base">
                             Brain Drive é um projeto acadêmico desenvolvido durante o Challenge da FIAP em parceria com a <br/>
                             Porto Seguro. No projeto, atuei junto ao grupo no design e na implementação, integrando a API REST <br/>
                             em Java com o banco de dados e o front-end para garantir o funcionamento do site.
