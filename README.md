@@ -1,37 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌟 **Portfólio de Mariana Christina** 🌟  
 
-## Getting Started
+Seja bem-vindo(a) ao meu portfólio! Eu sou a Mariana, estudante de Análise e Desenvolvimento de Sistemas na FIAP, apaixonada por criar soluções tecnológicas que impactem positivamente o mundo. Aqui você encontrará uma vitrine dos meus projetos, habilidades e experiências. 
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🖋️ **Sobre Mim**  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Nome:** Mariana  
+- **Idade:** 18 anos  
+- **Educação:** Estudante de Análise e Desenvolvimento de Sistemas (FIAP)  
+- **Paixões:** Desenvolvimento web, análise de dados e inovação tecnológica.  
+- **Objetivo:** Criar soluções tecnológicas que promovam eficiência, sustentabilidade e acessibilidade.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 **Principais Tecnologias e Ferramentas**  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### **Frontend:**  
+- **Linguagens:** JavaScript, TypeScript
+- **Frameworks/Bibliotecas:** React, Next.js, Angular  
+- **Estilização:** Tailwind CSS, Styled-Components
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### **Backend:**  
+- **Linguagens:** Java, Python  
+- **APIs:** RESTful APIs, integração com APIs externas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### **Banco de Dados:**  
+- MySQL e Oracle
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Ferramentas de Desenvolvimento:**  
+- Git, GitHub, IntelliJ IDEA, Eclipse, VS Code  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Portfolio
+## 📊 **Habilidades em Destaque**  
+
+- **Desenvolvimento Web:**  
+  - Criação de interfaces modernas, responsivas e intuitivas.  
+  - Integração entre front-end e back-end.  
+
+- **Análise de Dados:**  
+  - Coleta, manipulação e visualização de dados.  
+  - Geração de relatórios e insights para tomada de decisão.  
+
+- **Sustentabilidade e Tecnologia:**  
+  - Desenvolvimento de soluções que promovem eficiência energética e responsabilidade ambiental.  
+
+- **Gestão de Projetos:**  
+  - Versionamento com Git/GitHub.  
+  - Trabalho em equipe e comunicação eficaz.  
+
+## 📫 **Como Entrar em Contato**  
+
+- **Email:** [mariana.christina.crf@gmail.com](mailto:mariana.christina.crf@gmail.com)  
+- **LinkedIn:** [[linkedin.com/in/mariana](https://www.linkedin.com/in/mariana-fernandes-92690425a/)]([https://linkedin.com/in/mariana](https://www.linkedin.com/in/mariana-fernandes-92690425a/))  
+- **GitHub:** [https://github.com/MaryChriss](https://github.com/MaryChriss)   
+
+---
+
+✨ **Obrigado por visitar meu portfólio! Espero que meus projetos inspirem e demonstrem minha paixão! Fique à vontade para entrar em contato!**
