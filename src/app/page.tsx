@@ -65,40 +65,40 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   return (
     <Layout>
 
-      <section id="home" className=' mb-80 mt-64
-        xs:mt-80 xs:mb-10
-        xmd:mt-72 xmd:mb-72
-        xlg:mt-72 xlg:mb-72 
-        sm:mb-80 sm:mt-96
-        md:mt-96
-        lg:mt-80
-        xl:mt-0 xl:mb-60
-        2xl:mt-56 2xl:mb-80
+      <section id="home" className='mb-80 mt-64
+        xs:mt-0 xs:mb-10
+        xmd:mt-0 xmd:mb-72
+        xlg:mt-0 xlg:mb-72 
+        sm:mb-80 sm:mt-40
+        md:mt-32
+        lg:mt-32
+        xl:mt-0 xl:mb-0
+        2xl:mt-36 2xl:mb-36
       '>
 
-        <div  className='mt-40 flex items-center justify-center gap-96 mb-24
-        xs:flex-col xs:p-4
+        <div  className='mt-40 flex items-center justify-center mb-24
+        xs:flex-col xs:p-4 xs:mt-32
         xmd:flex-col xmd:p-9
         xlg:flex-col xlg:p-9
         sm:flex-col sm:mt-16 sm:-mb-11
         md:flex-col
         lg:flex-col
-        xl:mt-40 xl:flex-row xl:gap-24
-        2xl:flex-row 2xl:mt-40
+        xl:mt-36 xl:flex-row xl:gap-24
+        2xl:flex-row 2xl:gap-96 2xl:mt-11
         '>
           
 
-          <div className='text-xl -mt-48
+          <div className='text-xl 
           '>
           <h1 className="text-4xl font-bold text-gray-800
-          xs:text-lg   
-          xmd:text-xl xmd:mt-16
-          xlg:text-2xl xlg:mt-16
-          sm:text-4xl 
-          md:text-4xl 
-          lg:text-4xl 
-          xl:text-3xl
-          2xl:text-4xl
+          xs:text-lg
+          xmd:text-xl xmd:mt-0
+          xlg:text-2xl xlg:mt-0
+          sm:text-2xl 
+          md:text-3xl 
+          lg:text-3xl 
+          xl:text-2xl
+          2xl:text-4xl 2xl:mt-28
           ">
             <Typewriter
               words={["Hello World!", "Bem-vindo(a) ao meu mundo!", "Muito Prazer!"]}
@@ -115,10 +115,10 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               xs:text-lg
               xmd:text-xl
               xlg:text-2xl 
-              sm:text-4xl 
-              md:text-4xl 
-              lg:text-4xl 
-              xl:text-3xl
+              sm:text-2xl 
+              md:text-3xl 
+              lg:text-3xl 
+              xl:text-2xl
               2xl:text-4xl
               '>
                 <p>Eu sou a
@@ -130,40 +130,66 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               xs:text-sm
               xmd:text-base
               xlg:text-lg 
-              sm:text-2xl 
-              md:text-2xl
-              lg:text-2xl 
-              xl:text-xl
-              2xl:text-2xl
+              sm:text-xl 
+              md:text-xl
+              lg:text-xl 
+              xl:text-lg
+              2xl:text-xl
             '> <br/> Estudante de Análise e Desenvolvimento de Sistemas,<br/>
               apaixonada por criar experiências digitais intuitivas e<br/>
               criativas.
             </p>
 
             <p className='text-2xl
-            xs:text-sm xs:-mb-96
+            xs:text-sm xs:-mb-52
             xmd:text-base xmd:-mb-60
             xlg:-mb-52 xlg:text-lg 
-            sm:-mb-52
-            md:-mb-52 
-            lg:-mb-52 
-            xl:text-xl
-            2xl:text-2xl '> <br/>
+            sm:-mb-52 sm:text-xl 
+            md:-mb-52 md:text-xl 
+            lg:-mb-52 lg:text-xl 
+            xl:text-lg
+            2xl:text-xl '> <br/>
               Explore meu portfólio para conhecer mais sobre mim e <br/> 
               meus projetos!
             </p>
 
-          </div>
+            <div className="mt-60
+              xs:mt-64 xs:mb-20
+              xmd:mt-72 xmd:mb-14
+              xlg:mt-60 xlg:mb-14
+              sm:mt-60
+              md:mt-60 md:mb-40
+              lg:mt-60 
+              xl:mt-60
+              2xl:mt-60
+            ">
+              <a
+                href="/Curriculo_Mariana.pdf" download="Curriculo_Mariana.pdf"
+                target="_blank"
+                className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold text-lg rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md
+                xs:w-28 xs:h-12 xs:text-sm
+                xmd:w-28 xmd:h-12 xmd:text-sm
+                xlg:w-28 xlg:h-12 xlg:text-sm
+                sm:w-32 sm:text-base
+                md:w-48 md:text-lg
+                lg:w-48 lg:text-lg
+                xl:w-36 xl:text-base
+                2xl:w-48 2xl:text-lg
+                "
+              > Download CV </a>
+            </div>
+            
 
+          </div>
           <div className=' mt-0
-            xs:mr-5 xs:-mt-12
+            xs:mr-5
             xmd:mt-0
             xlg:mt-0 
             sm:mt-0
             md:mt-0 
             lg:mt-0 
-            xl:mt-0
-            2xl:mt-0
+            xl:-mt-52
+            2xl:-mt-20
           '>
             <Fotos imagens={[{ src: "/princImage.jpeg", alt: "Minha Foto" }]} />
           </div>
