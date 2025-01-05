@@ -1,12 +1,15 @@
 "use client";
 
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
+import { MdOutlineMenu, MdClose } from "react-icons/md";
 import { useState, useEffect } from "react";
 
 export const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("");
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     const handleScroll = (id: string) => {
         const offsets: { [key: string]: number } = {
@@ -15,7 +18,6 @@ export const Header = () => {
             projetos: 80,
             contato: 79,
         };
-
         const div = document.getElementById(id);
         if (div) {
             const headerOffset = offsets[id] || 70;
@@ -27,8 +29,16 @@ export const Header = () => {
                 behavior: "smooth",
             });
 
-            // Atualizar seção ativa
             setActiveSection(id);
+        }
+
+        setIsMenuOpen(false);
+    };
+
+    const toggleDarkMode = () => {
+        setIsDarkMode((prev) => !prev);
+        if (typeof window !== "undefined") {
+            document.documentElement.classList.toggle("dark", !isDarkMode);
         }
     };
 
@@ -52,7 +62,7 @@ export const Header = () => {
                     }
                 });
             },
-            { threshold: 0.6 } // Ajuste a sensibilidade se necessário
+            { threshold: 0.6 }
         );
 
         sections.forEach((id) => {
@@ -99,18 +109,8 @@ export const Header = () => {
             }`}
             style={{ marginTop: "10px" }}
         >
-            <div
-                className="relative flex gap-32 
-                xs:text-xs xs:gap-1
-                xmd:gap-2
-                xlg:gap-7
-                sm:text-xs sm:gap-7 sm:ml-6
-                md:gap-7 md:ml-9
-                lg:gap-32 
-                xl:gap-32 
-                2xl:gap-32"
-            >
-                {/* Indicador móvel */}
+
+            <div className="hidden lg:flex relative flex gap-32">
                 <span
                     className="absolute bottom-0 h-1 bg-pink-500/35 rounded-full transition-all duration-300"
                     style={{
@@ -118,7 +118,6 @@ export const Header = () => {
                         width: `${indicatorStyle.width}px`,
                     }}
                 />
-
                 {["home", "sobre-mim", "projetos", "contato"].map((id) => (
                     <p
                         key={id}
@@ -128,64 +127,54 @@ export const Header = () => {
                             activeSection === id
                                 ? "text-pink-500 font-bold"
                                 : "hover:text-pink-500"
-                        }
-                        xs:text-xs
-                        xmd:text-xs
-                        xlg:text-xs
-                        sm:text-xs 
-                        md:text-xs 
-                        lg:text-sm 
-                        xl:text-base 
-                        2xl:text-base`}
+                        }`}
                     >
                         {id.toUpperCase().replace("-", " ")}
                     </p>
                 ))}
             </div>
 
-            <div
-                className="flex gap-3 
-                xs:gap-0
-                xmd:gap-1
-                xlg:gap-1
-                sm:gap-1 
-                md:gap-3 
-                lg:gap-3 
-                xl:gap-3 
-                2xl:gap-3"
+            <button
+                className="lg:hidden flex items-center justify-center w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
+                {isMenuOpen ? <MdClose size={24} /> : <MdOutlineMenu size={24} />}
+            </button>
+
+            <div
+                className={`absolute top-16 left-0 w-full bg-pink-100 p-4 rounded-lg shadow-lg lg:hidden transition-all duration-300 ease-in-out
+                    ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"}
+                `}
+            >
+                {["home", "sobre-mim", "projetos", "contato"].map((id) => (
+                    <p
+                        key={id}
+                        onClick={() => handleScroll(id)}
+                        className={`cursor-pointer text-center py-2 rounded-lg transition-colors ${
+                            activeSection === id
+                                ? "text-pink-500 font-bold"
+                                : "hover:text-pink-500"
+                        }`}
+                    >
+                        {id.toUpperCase().replace("-", " ")}
+                    </p>
+                ))}
+            </div>
+
+            <div className="flex gap-3">
                 <a
                     href="https://github.com/MaryChriss"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-600
-                        xs:w-8 xs:h-8
-                        xmd:w-10 xmd:h-10
-                        xlg:w-10 xlg:h-10
-                        sm:w-10 sm:h-10 
-                        md:w-10 md:h-10 
-                        lg:w-10 lg:h-10
-                        xl:w-10 xl:h-10
-                        2xl:w-10 2xl:h-10
-                    "
+                    className="flex items-center justify-center w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors"
                 >
                     <IoLogoGithub className="w-6 h-6" />
                 </a>
-
                 <a
                     href="https://www.linkedin.com/in/mariana-fernandes-92690425a/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-600
-                        xs:w-8 xs:h-8
-                        xmd:w-10 xmd:h-10
-                        xlg:w-10 xlg:h-10
-                        sm:w-10 sm:h-10 
-                        md:w-10 md:h-10 
-                        lg:w-10 lg:h-10
-                        xl:w-10 xl:h-10
-                        2xl:w-10 2xl:h-10
-                    "
+                    className="flex items-center justify-center w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors"
                 >
                     <IoLogoLinkedin className="w-6 h-6" />
                 </a>

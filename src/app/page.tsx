@@ -65,7 +65,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   return (
     <Layout>
 
-      <section id="home" className='mb-80 mt-64
+      <section id="home" className='mb-80 mt-64 
         xs:mt-0 xs:mb-10
         xmd:mt-0 xmd:mb-72
         xlg:mt-0 xlg:mb-72 

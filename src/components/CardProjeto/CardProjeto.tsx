@@ -6,7 +6,7 @@ interface CardProjetoProps {
     alt: string;
     titulo: string;
     descricao: string;
-    link: string; // Adiciona a propriedade de link
+    link: string;
 }
 
 export const CardProjeto: React.FC<CardProjetoProps> = ({ src, alt, titulo, descricao, link }) => {
