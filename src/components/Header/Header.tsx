@@ -102,12 +102,12 @@ export const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[95%] p-2 z-50 flex items-center justify-between rounded-full transition-all duration-300 ${
+            className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[95%] p-3 z-50 flex items-center justify-between rounded-full transition-all duration-300 ${
                 isScrolled
                     ? "bg-white text-black shadow-xl"
                     : "bg-pink-100 text-black shadow-none"
             }`}
-            style={{ marginTop: "10px" }}
+            style={{marginTop: "10px" }}
         >
 
             <div className="hidden lg:flex relative flex gap-32">
@@ -123,7 +123,7 @@ export const Header = () => {
                         key={id}
                         id={`header-item-${id}`}
                         onClick={() => handleScroll(id)}
-                        className={`relative cursor-pointer transition-colors ${
+                        className={`relative cursor-pointer transition-colors ml-5 ${
                             activeSection === id
                                 ? "text-pink-500 font-bold"
                                 : "hover:text-pink-500"

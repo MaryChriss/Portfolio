@@ -277,7 +277,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 possibilidade de criar soluções inovadoras para problemas do dia a dia, <br/>
                 explorando a criatividade e acompanhando a constante evolução dessa área tão dinâmica. <br/>
 
-                <br/> Durante minha jornada, trabalhei em projetos com <span className='text-pink-600'> Java, React e Next.js, </span> <br/>
+                <br/> Durante minha jornada, trabalhei em projetos com <span className='text-pink-600'> Java, React, Next.js, SQL e Python </span> <br/>
                 explorando desde APIs até interfaces intuitivas, cada experiência me ajudou a <br/>
                 desenvolver habilidades técnicas e um olhar atento para criar soluções que <br/>
                 aliem funcionalidade e design. <br/>
