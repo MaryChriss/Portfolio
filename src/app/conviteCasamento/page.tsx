@@ -3,11 +3,8 @@
 import { CardProjeto } from "@/components/CardProjeto/CardProjeto";
 import { Layout } from "@/components/Layout/Layout";
 import { useRouter } from "next/navigation";
-import { BiLogoTypescript } from "react-icons/bi";
 import { FaAngular, FaDatabase, FaSass } from "react-icons/fa";
 import { FaCircleArrowLeft } from "react-icons/fa6";
-import { RiJavaLine, RiReactjsLine } from "react-icons/ri";
-import { SiNextdotjs } from "react-icons/si";
 
 export default function Convite() {
 
@@ -68,7 +65,7 @@ export default function Convite() {
 
                     <div className="flex justify-center">
                         <a
-                            href="https://portfolio-alpha-lovat-97.vercel.app/"
+                            href="https://convite-tatiane-roberto.netlify.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
@@ -124,7 +121,7 @@ export default function Convite() {
                                 2xl:text-base
                             ">
                             O convite de casamento foi criado com o propósito de refletir o amor e a dedicação colocados na <br/>
-                            celebração desse momento tão especia.Pensado com cada detalhe para transmitir carinho <br/> 
+                            celebração desse momento tão especia. Pensado com cada detalhe para transmitir carinho <br/> 
                             e sofisticação, ele convida os amigos e familiares a compartilharem a alegria <br/>
                             de um dia único, cheio de significado e emoção.<br/>
                             </p>
@@ -178,11 +175,10 @@ export default function Convite() {
                             lg:text-base
                             xl:text-base
                             2xl:text-base">
-                            Este convite de casamento foi desenvolvido em colaboração, unindo esforços e criatividade para criar algo especial.<br/>
-                            Minha contribuição esteve focada principalmente na parte visual e responsiva, cuidando das responsividade,  <br/> auxiliando no design,
-                            na escolha das cores e desenvolvendo as ideias iniciais no Figma. Foi gratificante transformar <br/>
-                            conceitos em um convite elegante e funcional, que reflete a essência da <br/>
-                            celebração e encanta a todos que o recebem.
+                            Este convite de casamento foi desenvolvido em parceria com <a className="text-pink-600" href="https://www.linkedin.com/in/miguel-fernandes-799443268/">Miguel Francisco</a>, unindo esforços e criatividade para criar algo<br/> único e especial.
+                            Minha contribuição esteve voltada principalmente para a parte visual e responsiva, cuidando da<br/>
+                            adaptação para diferentes dispositivos, auxiliando no design, na escolha das cores e no desenvolvimento das ideias iniciais no Figma. <br/>
+                            Foi uma experiência gratificante transformar conceitos em um convite elegante e funcional, que reflete a essência da celebração<br/> e encanta a todos que o recebem.<br/>
                             </p>
                         </div>
 
