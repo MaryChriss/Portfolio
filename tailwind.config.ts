@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       animation: {
         slideIn: "slideIn 0.3s ease-out",
-        countdown: "countdown 5s linear forwards", // Animação do círculo do timer
+        countdown: "countdown 5s linear forwards", 
       },
       keyframes: {
         slideIn: {
@@ -18,8 +18,8 @@ const config: Config = {
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
         countdown: {
-          from: { strokeDashoffset: "100" }, // Começa com o círculo cheio
-          to: { strokeDashoffset: "0" },    // Termina com o círculo vazio
+          from: { strokeDashoffset: "100" },
+          to: { strokeDashoffset: "0" }, 
         },
       },
       screens: {
