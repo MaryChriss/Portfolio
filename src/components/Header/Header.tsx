@@ -9,7 +9,6 @@ export const Header = () => {
     const [activeSection, setActiveSection] = useState("");
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
 
     const handleScroll = (id: string) => {
         const offsets: { [key: string]: number } = {
@@ -33,13 +32,6 @@ export const Header = () => {
         }
 
         setIsMenuOpen(false);
-    };
-
-    const toggleDarkMode = () => {
-        setIsDarkMode((prev) => !prev);
-        if (typeof window !== "undefined") {
-            document.documentElement.classList.toggle("dark", !isDarkMode);
-        }
     };
 
     useEffect(() => {

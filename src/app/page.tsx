@@ -1,15 +1,30 @@
 "use client";
 
 import { CardProjeto } from '@/components/CardProjeto/CardProjeto';
+import ErrorModal from '@/components/ErrorModal/ErrorModal';
 import { Fotos } from '@/components/Fotos/Fotos';
 import Input from '@/components/Input/Input';
 import { Layout } from '@/components/Layout/Layout';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaDatabase } from 'react-icons/fa';
 import { PiMoonStarsFill } from 'react-icons/pi';
 import { RiJavaLine, RiReactjsLine } from 'react-icons/ri';
 import { SiNextdotjs } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object().shape({
+  nome: Yup.string()
+      .matches(/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/, 'O nome deve conter apenas letras.')
+      .min(3, 'O nome deve ter pelo menos 3 caracteres.')
+      .required('O nome é obrigatório.'),
+  email: Yup.string()
+      .email('Insira um e-mail válido.')
+      .required('O e-mail é obrigatório.'),
+  mensagem: Yup.string()
+      .min(5, 'A mensagem deve ter pelo menos 5 caracteres.')
+      .required('A mensagem é obrigatória.')
+});
 
 
 // xs: xmd: xlg: sm: md: lg: xl: 2xl:
@@ -30,36 +45,36 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaE
     });
 };
 
+const [errorMessages, setErrorMessages] = useState<string[]>([]);
+
 const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-        const response = await fetch('https://formspree.io/f/xlddgqag', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: formData.nome,
-                email: formData.email,
-                message: formData.mensagem
-            })
-        });
+  try {
+    await validationSchema.validate(formData, { abortEarly: false });
 
-        if (response.ok) {
-            alert('Mensagem enviada com sucesso!');
-            setFormData({
-                nome: '',
-                email: '',
-                mensagem: ''
-            });
-        } else {
-            alert('Erro ao enviar a mensagem. Por favor, tente novamente.');
-        }
-    } catch (error) {
-        console.error("Erro:", error); 
-        alert('Erro ao enviar a mensagem. Verifique sua conexão e tente novamente.');
+    // Sucesso na validação e envio
+    const response = await fetch('https://formspree.io/f/xlddgqag', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setErrorMessages([]);
+      alert("Mensagem enviada com sucesso!");
+    } else {
+      setErrorMessages(["Erro ao enviar a mensagem. Tente novamente."]);
     }
+  } catch (error) {
+    if (error instanceof Yup.ValidationError) {
+      setErrorMessages(error.inner.map(err => err.message));
+    } else {
+      setErrorMessages(["Erro inesperado. Tente novamente."]);
+    }
+  }
 };
 
   return (
@@ -418,8 +433,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
         </div>
-
-        
       </section>
 
       <section id='contato' className=' bg-pink-50 
@@ -484,6 +497,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 <div className='flex text-center justify-center mt-8 mb-32'>
                   <button type="submit" className="text-base bg-pink-700 hover:bg-pink-600 transition-colors duration-600 text-white p-3 w-36 rounded-full ">Enviar</button>
                 </div>
+
+                <div className="fixed bottom-4 right-4 flex justify-end items-end z-50">
+                  {errorMessages.length > 0 && (
+                    <ErrorModal messages={errorMessages} onClose={() => setErrorMessages([])} />
+                  )}
+                </div>
         </form>
 
         <div className='mt-16
@@ -493,8 +512,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           sm:mt-5 sm:flex sm:justify-center sm:mb-40
           md:mt-5 md:justify-center md:mb-40
           lg:mt-5 lg:justify-center lg:mb-40
-          xl:mt-16 
-          2xl:mt-16
+          xl:mt-32
+          2xl:mt-28
         '>
           <Fotos imagens={[{ src: "/contat.jpeg", alt: "Minha Foto" }]} />
         </div>

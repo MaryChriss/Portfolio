@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        slideIn: "slideIn 0.3s ease-out",
+        countdown: "countdown 5s linear forwards", // Animação do círculo do timer
+      },
+      keyframes: {
+        slideIn: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        countdown: {
+          from: { strokeDashoffset: "100" }, // Começa com o círculo cheio
+          to: { strokeDashoffset: "0" },    // Termina com o círculo vazio
+        },
+      },
       screens: {
         xs: "320px",  
         xmd: "375px",  
@@ -24,7 +38,7 @@ const config: Config = {
     },
   },
   plugins: [
-    require('tailwind-scrollbar')
+    require('tailwind-scrollbar'),
   ],
 }
-export default config
+export default config;
