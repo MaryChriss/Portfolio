@@ -3,8 +3,11 @@
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import { useState, useEffect } from "react";
+import { PiMoonStarsFill, PiSunFill } from "react-icons/pi";
+import { useDarkMode } from "@/app/context/DarkModeContext";
 
 export const Header = () => {
+    const { darkMode, toggleDarkMode } = useDarkMode();
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("");
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
@@ -94,10 +97,14 @@ export const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[95%] p-3 z-50 flex items-center justify-between rounded-full transition-all duration-300 ${
-                isScrolled
-                    ? "bg-white text-black shadow-xl"
-                    : "bg-pink-100 text-black shadow-none"
+        className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[95%] p-3 z-50 flex items-center justify-between rounded-full transition-all duration-300 ${
+            isScrolled
+                ? darkMode
+                    ? "bg-gray-900 text-white shadow-xl"
+                    : "bg-white text-black shadow-xl"
+                : darkMode
+                ? "bg-gray-800 text-white shadow-none"
+                : "bg-pink-100 text-black shadow-none"
             }`}
             style={{marginTop: "10px" }}
         >
@@ -170,6 +177,17 @@ export const Header = () => {
                 >
                     <IoLogoLinkedin className="w-6 h-6" />
                 </a>
+
+                <button
+                    onClick={toggleDarkMode}
+                    className="flex items-center justify-center w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors"
+                >
+                    {darkMode ? (
+                        <PiSunFill className="w-6 h-6" />
+                    ) : (
+                        <PiMoonStarsFill className="w-6 h-6" />
+                    )}
+                </button>
             </div>
         </header>
     );

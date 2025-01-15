@@ -12,6 +12,7 @@ import { RiJavaLine, RiReactjsLine } from 'react-icons/ri';
 import { SiNextdotjs } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
 import * as Yup from 'yup';
+import { useDarkMode } from './context/DarkModeContext';
 
 const validationSchema = Yup.object().shape({
   nome: Yup.string()
@@ -30,6 +31,8 @@ const validationSchema = Yup.object().shape({
 // xs: xmd: xlg: sm: md: lg: xl: 2xl:
 
 export default function Home() {
+
+  const { darkMode } = useDarkMode();
 
   const [formData, setFormData] = useState({
     nome: '',
@@ -53,7 +56,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   try {
     await validationSchema.validate(formData, { abortEarly: false });
 
-    // Sucesso na validação e envio
     const response = await fetch('https://formspree.io/f/xlddgqag', {
       method: 'POST',
       headers: {
@@ -78,8 +80,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 };
 
   return (
-    <Layout>
 
+    <Layout>
       <section id="home" className='mb-80 mt-64 
         xs:mt-0 xs:mb-10
         xmd:mt-0 xmd:mb-72
@@ -212,7 +214,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
       </section>
 
-      <section id="sobre-mim" className='bg-pink-50 flex items-center justify-center gap-56
+      <section id="sobre-mim" className={`flex items-center justify-center gap-56
       xs:flex-col
       xmd:flex-col
       xlg:flex-col
@@ -221,7 +223,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       lg:flex-col 
       xl:justify-center xl:flex-row
       2xl:items-center 2xl:flex-row
-      '>
+      ${ darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+      }`}
+      >
 
           <div className='-mt-40
           xs:mt-40 xs:-mb-48 xs:mr-5

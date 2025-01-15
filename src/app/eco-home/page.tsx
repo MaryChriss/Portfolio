@@ -15,8 +15,7 @@ export default function Ecohome() {
     
     return(
         <Layout>
-
-            <div className=" flex justify-center gap-48 mb-11 
+            <div className="flex justify-center gap-48 mb-11
             xs:flex-col xs:gap-7 xs:p-5
             xmd:flex-col xmd:gap-10 xmd:p-7
             xlg:flex-col xlg:gap-8 xlg:p-10
@@ -240,7 +239,6 @@ export default function Ecohome() {
                     </div>
                 </div>
             </div>
-            
         </Layout>
     )
 }

@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Marca esse componente como client-side
 
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
