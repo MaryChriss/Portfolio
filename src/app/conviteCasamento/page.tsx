@@ -5,9 +5,11 @@ import { Layout } from "@/components/Layout/Layout";
 import { useRouter } from "next/navigation";
 import { FaAngular, FaSass } from "react-icons/fa";
 import { FaCircleArrowLeft } from "react-icons/fa6";
+import { useDarkMode } from "../context/DarkModeContext";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function Convite() {
-
+    const { darkMode } = useDarkMode();
     const router = useRouter();
     
     return(
@@ -64,12 +66,13 @@ export default function Convite() {
                     </div>
 
                     <div className="flex justify-center">
-                        <a
-                            href="https://convite-tatiane-roberto.netlify.app/"
+                    <a
+                            href="https://sprint4-frontend-qsvg.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
-                        > Visite o projeto! </a>
+                            className={`flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md
+                                ${ darkMode ? "bg-pink-600 text-white hover:bg-pink-700" : "bg-pink-200"}`}
+                            > Visite o projeto! </a>
                     </div>
                 </div>
 
@@ -139,7 +142,7 @@ export default function Convite() {
                                 2xl:text-4xl
                             ">Tecnologias Utilizadas:</h2>
 
-                            <ul className="list-disc list-inside text-gray-800
+                            <ul className={`list-disc list-inside text-gray-800
                                 xs:text-sm
                                 xmd:text-sm
                                 xlg:text-base
@@ -148,9 +151,10 @@ export default function Convite() {
                                 lg:text-base
                                 xl:text-base
                                 2xl:text-base
-                            ">
-                                <li>Angular</li>
-                                <li>Sass</li>
+                            ${ darkMode ? " text-white" : "text-gray-800"}`}>
+                                <li>Next.js</li>
+                                <li>TypeScript</li>
+                                <li>Tailwind</li>
                             </ul>
                         </div>
 
@@ -175,7 +179,7 @@ export default function Convite() {
                             lg:text-base
                             xl:text-base
                             2xl:text-base">
-                            Este convite de casamento foi desenvolvido em parceria com <a target="_blank" className="text-pink-600" href="https://www.linkedin.com/in/miguel-fernandes-799443268/">Miguel Francisco</a>, unindo esforços e criatividade para criar algo único e especial.<br/>
+                            Este convite de casamento foi desenvolvido em parceria com <a target="_blank" className={darkMode ? "text-pink-400" : "text-pink-600"} href="https://www.linkedin.com/in/miguel-fernandes-799443268/">Miguel Francisco</a>, unindo esforços e criatividade para criar algo único e especial.<br/>
                             Minha contribuição esteve voltada principalmente para a parte visual e responsiva, cuidando da
                             adaptação para diferentes dispositivos, auxiliando no design, na<br/> escolha das cores e no desenvolvimento das ideias iniciais no Figma. 
                             Foi uma experiência gratificante transformar conceitos em um convite elegante e funcional,<br/> que reflete a essência da celebração e encanta a todos que o recebem.
@@ -212,7 +216,7 @@ export default function Convite() {
                     </div>
                 </div>
             </div>
-            
+            <Footer/>
         </Layout>
     )
 }

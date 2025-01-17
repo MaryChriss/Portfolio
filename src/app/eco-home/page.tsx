@@ -1,6 +1,7 @@
 "use client";
 
 import { CardProjeto } from "@/components/CardProjeto/CardProjeto";
+import { Footer } from "@/components/Footer/Footer";
 import { Layout } from "@/components/Layout/Layout";
 import { useRouter } from "next/navigation";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -8,9 +9,11 @@ import { FaDatabase } from "react-icons/fa";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { RiJavaLine, RiReactjsLine } from "react-icons/ri";
 import { SiNextdotjs } from "react-icons/si";
+import { useDarkMode } from "../context/DarkModeContext";
 
 export default function Ecohome() {
-
+    const { darkMode } = useDarkMode();
+    
     const router = useRouter();
     
     return(
@@ -23,7 +26,8 @@ export default function Ecohome() {
             md:flex-col md:p-16
             lg:flex-row lg:gap-6
             xl:flex-row
-            2xl:flex-row 2xl:gap-60 2xl:p-0">
+            2xl:flex-row 2xl:gap-60 2xl:p-0"
+            >
 
                 <div className="mt-24 flex justify-start mr-20 -ml-36
                 xs:ml-0 xs:p-6 xs:
@@ -70,7 +74,7 @@ export default function Ecohome() {
                             href="https://global2-front.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
+                            className={`flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md ${ darkMode ? "bg-pink-600 text-white hover:bg-pink-700" : "bg-pink-200"}`}
                         > Visite o projeto! </a>
                     </div>
                 </div>
@@ -140,7 +144,7 @@ export default function Ecohome() {
                                 2xl:text-4xl
                             ">Tecnologias Utilizadas:</h2>
 
-                            <ul className="list-disc list-inside text-gray-800
+                            <ul className={`list-disc list-inside text-gray-800
                                 xs:text-sm
                                 xmd:text-sm
                                 xlg:text-base
@@ -149,7 +153,8 @@ export default function Ecohome() {
                                 lg:text-base
                                 xl:text-base
                                 2xl:text-base
-                            ">
+                                ${ darkMode ? "text-white" : "text-gray-800"}`}
+                            >
                                 <li>Next.js</li>
                                 <li>Java</li>
                                 <li>Oracle SQL</li>
@@ -239,6 +244,7 @@ export default function Ecohome() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </Layout>
     )
 }

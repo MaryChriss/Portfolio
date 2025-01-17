@@ -13,6 +13,20 @@ export const Header = () => {
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // Salva e carrega o estado do dark mode no localStorage
+    useEffect(() => {
+        const storedDarkMode = localStorage.getItem("darkMode");
+        if (storedDarkMode !== null) {
+            if (JSON.parse(storedDarkMode) !== darkMode) {
+                toggleDarkMode(); // Ajusta o estado no contexto
+            }
+        }
+    }, []); // Executa ao montar o componente
+
+    useEffect(() => {
+        localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    }, [darkMode]); // Atualiza no localStorage sempre que o estado mudar
+
     const handleScroll = (id: string) => {
         const offsets: { [key: string]: number } = {
             home: 1000,
@@ -97,15 +111,15 @@ export const Header = () => {
 
     return (
         <header
-        className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[95%] p-3 z-50 flex items-center justify-between rounded-full transition-all duration-300 ${
-            isScrolled
+            className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[95%] p-3 z-50 flex items-center justify-between rounded-full transition-all duration-300 ${
+                isScrolled
                 ? darkMode
-                    ? "bg-gray-900 text-white shadow-xl"
+                    ? "bg-pink-950 text-white shadow-xl"
                     : "bg-white text-black shadow-xl"
                 : darkMode
-                ? "bg-gray-800 text-white shadow-none"
+                ? "bg-pink-900 text-white shadow-none"
                 : "bg-pink-100 text-black shadow-none"
-            }`}
+            }`}   
             style={{marginTop: "10px" }}
         >
 

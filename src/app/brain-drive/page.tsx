@@ -1,6 +1,7 @@
 "use client";
 
 import { CardProjeto } from "@/components/CardProjeto/CardProjeto";
+import { Footer } from "@/components/Footer/Footer";
 import { Layout } from "@/components/Layout/Layout";
 import { useRouter } from "next/navigation";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -9,8 +10,10 @@ import { FaCircleArrowLeft } from "react-icons/fa6";
 import { IoIosChatbubbles } from "react-icons/io";
 import { RiJavaLine } from "react-icons/ri";
 import { SiNextdotjs } from "react-icons/si";
+import { useDarkMode } from "../context/DarkModeContext";
 
 export default function BrainDrive() {
+    const { darkMode } = useDarkMode();
     const router = useRouter();
     
     return(
@@ -75,8 +78,9 @@ export default function BrainDrive() {
                             href="https://sprint4-frontend-qsvg.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
-                        > Visite o projeto! </a>
+                            className={`flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md
+                                ${ darkMode ? "bg-pink-600 text-white hover:bg-pink-700" : "bg-pink-200"}`}
+                            > Visite o projeto! </a>
                     </div>
                 </div>
 
@@ -145,7 +149,7 @@ export default function BrainDrive() {
                                 2xl:text-4xl
                             ">Tecnologias Utilizadas:</h2>
 
-                            <ul className="list-disc list-inside text-gray-800
+                            <ul className={`list-disc list-inside text-gray-800
                                 xs:text-sm
                                 xmd:text-sm
                                 xlg:text-base
@@ -154,7 +158,8 @@ export default function BrainDrive() {
                                 lg:text-base
                                 xl:text-base
                                 2xl:text-base
-                            ">
+                                ${ darkMode ? "text-white" : "text-gray-800"}`}
+                            >
                                 <li>Next.js 13</li>
                                 <li>Java</li>
                                 <li>Oracle SQL</li>
@@ -244,7 +249,7 @@ export default function BrainDrive() {
                     </div>
                 </div>
             </div>
-            
+            <Footer/>
         </Layout>
     )
 }

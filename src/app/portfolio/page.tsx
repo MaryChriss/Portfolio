@@ -6,11 +6,13 @@ import { useRouter } from "next/navigation";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaDatabase } from "react-icons/fa";
 import { FaCircleArrowLeft } from "react-icons/fa6";
-import { RiJavaLine, RiReactjsLine } from "react-icons/ri";
+import { RiReactjsLine } from "react-icons/ri";
 import { SiNextdotjs } from "react-icons/si";
+import { useDarkMode } from "../context/DarkModeContext";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function Portfolio() {
-
+    const { darkMode } = useDarkMode();
     const router = useRouter();
     
     return(
@@ -67,12 +69,13 @@ export default function Portfolio() {
                     </div>
 
                     <div className="flex justify-center">
-                        <a
-                            href="https://portfolio-alpha-lovat-97.vercel.app/"
+                    <a
+                            href="https://sprint4-frontend-qsvg.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md"
-                        > Visite o projeto! </a>
+                            className={`flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md
+                                ${ darkMode ? "bg-pink-600 text-white hover:bg-pink-700" : "bg-pink-200"}`}
+                            > Visite o projeto! </a>
                     </div>
                 </div>
 
@@ -141,7 +144,7 @@ export default function Portfolio() {
                                 2xl:text-4xl
                             ">Tecnologias Utilizadas:</h2>
 
-                            <ul className="list-disc list-inside text-gray-800
+                            <ul className={`list-disc list-inside text-gray-800
                                 xs:text-sm
                                 xmd:text-sm
                                 xlg:text-base
@@ -150,7 +153,7 @@ export default function Portfolio() {
                                 lg:text-base
                                 xl:text-base
                                 2xl:text-base
-                            ">
+                            ${ darkMode ? " text-white" : "text-gray-800"}`}>
                                 <li>Next.js</li>
                                 <li>TypeScript</li>
                                 <li>Tailwind</li>
@@ -222,7 +225,7 @@ export default function Portfolio() {
                     </div>
                 </div>
             </div>
-            
+            <Footer/>
         </Layout>
     )
 }

@@ -13,6 +13,7 @@ import { SiNextdotjs } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
 import * as Yup from 'yup';
 import { useDarkMode } from './context/DarkModeContext';
+import { Footer } from '@/components/Footer/Footer';
 
 const validationSchema = Yup.object().shape({
   nome: Yup.string()
@@ -80,20 +81,21 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 };
 
   return (
-
     <Layout>
-      <section id="home" className='mb-80 mt-64 
-        xs:mt-0 xs:mb-10
+      <section id="home" className={`mb-80 m-0
+        xs:mt-0 xs:mb-10 xs:pt-10
         xmd:mt-0 xmd:mb-72
         xlg:mt-0 xlg:mb-72 
-        sm:mb-80 sm:mt-40
-        md:mt-32
-        lg:mt-32
+        sm:mb-80 sm:pt-20
+        md:mt-0 
+        lg:mt-0
         xl:mt-0 xl:mb-0
-        2xl:mt-36 2xl:mb-36
-      '>
+        2xl:mt-0 2xl:mb-36 2xl:pt-10
+        ${ darkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+        }`}
+      >
 
-        <div  className='mt-40 flex items-center justify-center mb-24
+        <div  className='m-0 flex items-center justify-center mb-24
         xs:flex-col xs:p-4 xs:mt-32
         xmd:flex-col xmd:p-9
         xlg:flex-col xlg:p-9
@@ -101,13 +103,13 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         md:flex-col
         lg:flex-col
         xl:mt-36 xl:flex-row xl:gap-24
-        2xl:flex-row 2xl:gap-96 2xl:mt-11
+        2xl:flex-row 2xl:gap-96 2xl:pt-0
         '>
           
 
           <div className='text-xl 
           '>
-          <h1 className="text-4xl font-bold text-gray-800
+          <h1 className={`text-4xl font-bold text-gray-800
           xs:text-lg
           xmd:text-xl xmd:mt-0
           xlg:text-2xl xlg:mt-0
@@ -116,10 +118,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           lg:text-3xl 
           xl:text-2xl
           2xl:text-4xl 2xl:mt-28
-          ">
+          ${ darkMode ? "text-white" : "text-black"
+          }`}
+          >
             <Typewriter
               words={["Hello World!", "Bem-vindo(a) ao meu mundo!", "Muito Prazer!"]}
-              loop={false} 
+              loop={false}
               typeSpeed={160}
               deleteSpeed={140}
               delaySpeed={1000}
@@ -138,8 +142,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               xl:text-2xl
               2xl:text-4xl
               '>
-                <p>Eu sou a
-                  <span className=" text-pink-800">  Mariana Christina.</span>
+                <p className={darkMode ? "text-white" : "text-black"}>Eu sou a
+                  <span className={darkMode ? "text-pink-400" : "text-pink-800"}>  Mariana Christina.</span>
                 </p>
               </div>
 
@@ -183,7 +187,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               <a
                 href="/Curriculo_Mariana.pdf" download="Curriculo_Mariana.pdf"
                 target="_blank"
-                className="flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold text-lg rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md
+                className={`flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold text-lg rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md
                 xs:w-28 xs:h-12 xs:text-sm
                 xmd:w-28 xmd:h-12 xmd:text-sm
                 xlg:w-28 xlg:h-12 xlg:text-sm
@@ -192,10 +196,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 lg:w-48 lg:text-lg
                 xl:w-36 xl:text-base
                 2xl:w-48 2xl:text-lg
-                "
+                ${ darkMode ? "bg-pink-600 text-white hover:bg-pink-700" : "bg-pink-200"}`}
               > Download CV </a>
             </div>
-            
 
           </div>
           <div className=' mt-0
@@ -223,7 +226,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       lg:flex-col 
       xl:justify-center xl:flex-row
       2xl:items-center 2xl:flex-row
-      ${ darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+      ${ darkMode ? "bg-pink-900/40 text-white" : "bg-pink-50 text-black"
       }`}
       >
 
@@ -270,7 +273,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               2xl:gap-2 2xl:mt-32
               '>
                 <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
-                <h1 className='text-3xl text-pink-800
+                <h1 className={`text-3xl text-pink-800
                   xs:text-lg 
                   xmd:text-lg
                   xlg:text-xl
@@ -279,7 +282,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   lg:text-2xl
                   xl:text-2xl xl:mb-11
                   2xl:text-3xl
-                '>Sobre Mim </h1>
+                  ${ darkMode ? "text-white" : "text-pink-800"}`}
+                >Sobre Mim </h1>
               </div>
 
               <p className='text-xl
@@ -291,12 +295,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 lg:text-lg lg:p-14
                 xl:text-base xl:p-1
                 2xl:text-xl
-              '> <br/> Sou entusiasta da tecnologia e estudante de <span className='text-pink-600'> Análise e Desenvolvimento de <br/>
+              '> <br/> Sou entusiasta da tecnologia e estudante de <span className={darkMode ? "text-pink-400" : "text-pink-600"}> Análise e Desenvolvimento de <br/>
               Sistemas na FIAP </span>. Oque mais me fascina no mundo da tecnologia é a <br/>
                 possibilidade de criar soluções inovadoras para problemas do dia a dia, <br/>
                 explorando a criatividade e acompanhando a constante evolução dessa área tão dinâmica. <br/>
 
-                <br/> Durante minha jornada, trabalhei em projetos com <span className='text-pink-600'> Java, React, Next.js, SQL e Python </span> <br/>
+                <br/> Durante minha jornada, trabalhei em projetos com <span className={darkMode ? "text-pink-400" : "text-pink-600"}> Java, React, Next.js, SQL e Python </span> <br/>
                 explorando desde APIs até interfaces intuitivas, cada experiência me ajudou a <br/>
                 desenvolver habilidades técnicas e um olhar atento para criar soluções que <br/>
                 aliem funcionalidade e design. <br/>
@@ -353,11 +357,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
       </section>
 
-      <section id='projetos'>
+      <section id='projetos' className={darkMode ? "bg-gray-800" : "bg-white"}>
 
         <div className='flex gap-2 justify-center mt-10 mb-10'>
           <PiMoonStarsFill size="2rem" className='text-pink-800 mt-1'/>
-          <h1 className='text-3xl mb-7'>Meus Projetos </h1>
+          <h1 className={`text-3xl mb-7 ${ darkMode ? "text-white" : "text-black"}`}
+          >Meus Projetos </h1>
         </div>
 
         <div className="flex justify-center text-center md:items-center flex-col gap-12  mt-14 mb-14
@@ -439,12 +444,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
       </section>
 
-      <section id='contato' className=' bg-pink-50 
-      '>
+      <section id='contato' className={darkMode ? "bg-pink-900/40 text-white" : "bg-pink-50 text-black"} 
+      >
 
         <div className='flex gap-2 justify-center'>
           <PiMoonStarsFill size="2rem" className='text-pink-800 mt-12'/>
-          <h1 className='text-3xl mt-11'>Contato </h1>
+          <h1 className={`text-3xl mt-11 ${ darkMode ? "text-white" : "text-black"}`}>Contato </h1>
         </div>
 
         <div className='flex justify-center gap-64 mt-14
@@ -499,7 +504,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               </div>
 
                 <div className='flex text-center justify-center mt-8 mb-32'>
-                  <button type="submit" className="text-base bg-pink-700 hover:bg-pink-600 transition-colors duration-600 text-white p-3 w-36 rounded-full ">Enviar</button>
+                  <button type="submit" className={`text-base bg-pink-700 hover:bg-pink-600 transition-colors duration-600 text-white p-3 w-36 rounded-full ${ darkMode ? "bg-pink-500" : "bg-pink-700"}`}>Enviar</button>
                 </div>
 
                 <div className="fixed bottom-4 right-4 flex justify-end items-end z-50">
@@ -524,6 +529,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
       </section>
+      <Footer />
     </Layout>
   )
 }
