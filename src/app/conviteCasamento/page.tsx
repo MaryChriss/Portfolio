@@ -67,7 +67,7 @@ export default function Convite() {
 
                     <div className="flex justify-center">
                     <a
-                            href="https://sprint4-frontend-qsvg.vercel.app/"
+                            href="https://convite-tatiane-roberto.netlify.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`flex items-center justify-center w-48 h-12 bg-pink-200 text-black font-abel font-semibold rounded-full hover:bg-pink-300 transition-colors duration-600 shadow-md
